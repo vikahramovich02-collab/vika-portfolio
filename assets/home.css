@@ -75,3 +75,20 @@
   .fly.low{top:calc(var(--y) + 9%)}
   .cover img,.cover video{aspect-ratio:4/3}
 }
+
+/* блок «Моё преимущество»: работа с ИИ */
+.ai{padding:clamp(120px,20vh,220px) var(--pad) 0}
+.ai__head{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;align-items:end}
+.ai__k{grid-column:1/-1;display:flex;align-items:center;gap:10px;margin:0;font-size:13px;color:var(--dim)}
+.ai__k::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--fg)}
+.ai h2{margin:0;font-weight:400;font-size:clamp(40px,5.6vw,92px);line-height:.92;letter-spacing:-.05em;max-width:12ch}
+.ai__lead{margin:0;justify-self:end;max-width:44ch;font-size:16px;line-height:1.55;color:var(--dim)}
+.ai__list{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin:clamp(40px,8vh,80px) 0 0;padding:0;list-style:none}
+.ai__list li{padding-top:14px;border-top:1px solid var(--rule)}
+.ai__list span{font-size:13px;color:var(--dim)}
+.ai__list h3{margin:14px 0 0;font-weight:500;font-size:clamp(22px,2vw,30px);letter-spacing:-.03em}
+.ai__list p{margin:12px 0 0;font-size:15px;line-height:1.55;color:#c9ccd0}
+.ai__tools{display:flex;flex-wrap:wrap;gap:6px;margin-top:clamp(32px,6vh,56px)}
+.ai__tools span{padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px}
+@media (max-width:900px){ .ai__head{grid-template-columns:1fr} .ai__lead{justify-self:start} .ai__list{grid-template-columns:1fr 1fr} }
+@media (max-width:560px){ .ai__list{grid-template-columns:1fr} }
