@@ -112,3 +112,9 @@
   .ch ul.rows li{grid-template-columns:1fr;gap:4px}
 }
 @media (max-width:560px){ .toc a{grid-template-columns:40px 1fr} .toc a span{display:none} }
+
+/* шапка легче (Вика, 22.10): заголовок тоньше и меньше, лид короткий и приглушённый, кнопки компактнее */
+.intro h1{font-weight:400;font-size:clamp(48px,7.2vw,124px);line-height:.9;letter-spacing:-.05em}
+.lead{max-width:52ch;font-size:clamp(15px,1.1vw,17px);line-height:1.55;letter-spacing:0;color:var(--dim)}
+.intro__cta .btn{height:40px;padding:0 18px;font-size:13px}
+.facts dd{font-size:14px}
