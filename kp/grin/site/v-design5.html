@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Grin Dental Lab — Boutique dental laboratory in San Francisco</title>
+<meta name="description" content="Veneers, crowns and full-arch implant restorations by Vasyl Hryn, CDT. Certified dental technician and licensed dentist, 17 years on both sides of the chair.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap">
+<style>
+/* Концепт главной Grin Dental Lab по DESIGN-5: пергаментный фон, тонкий шрифт 300,
+   тёмная навигация-пилюля, картинки со скруглением 80px, метки с квадратиком, без теней. */
+:root{
+  --vellum:#f0efe9;--paper:#fff;--carbon:#322d2a;--onyx:#0f0e12;--mercury:#8b8b8b;
+  --sans:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --max:1200px;--gap:48px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--vellum);color:var(--carbon);font-family:var(--sans);font-weight:400;font-size:16px;line-height:1.4;letter-spacing:.01em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,video{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* метка раздела с квадратиком */
+.label{display:inline-flex;align-items:center;gap:10px;font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+.label::before{content:"";width:4px;height:4px;background:currentColor}
+.display{font-weight:300;font-size:clamp(36px,4.4vw,52px);line-height:1;letter-spacing:.01em}
+.h3{font-weight:300;font-size:32px;line-height:1.2}
+.muted{color:var(--mercury)}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:18px 22px;border-radius:100px;font-size:14px;line-height:1;border:1px solid var(--carbon);transition:background .25s,color .25s}
+.btn--fill{background:var(--carbon);color:#fff}
+.btn--fill:hover{background:transparent;color:var(--carbon)}
+.btn--ghost:hover{background:var(--carbon);color:#fff}
+.btn--light{border-color:#fff;color:#fff}
+.btn--light.btn--fill{background:#fff;color:var(--carbon)}
+
+/* навигация-пилюля */
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:20;width:min(var(--max),calc(100% - 32px));display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--carbon);color:#fff;border-radius:16px;padding:14px 14px 14px 24px}
+.nav__logo{font-size:18px;letter-spacing:.18em;font-weight:400}
+.nav__links{display:flex;gap:24px;font-size:14px}
+.nav__links a{opacity:.8}.nav__links a:hover{opacity:1}
+.nav .btn{padding:12px 18px;background:#fff;color:var(--carbon);border-color:#fff}
+
+/* первый экран: ролик на весь экран, контент поверх */
+.hero{position:relative;height:100svh;min-height:640px;overflow:hidden;background:#e9e4da}
+.hero video,.hero > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__in{position:relative;height:100%;max-width:var(--max);margin:0 auto;padding:0 24px 56px;display:flex;flex-direction:column;justify-content:flex-end}
+.hero h1{max-width:12ch;font-weight:300;font-size:clamp(44px,6.2vw,84px);line-height:1;letter-spacing:-.005em}
+.hero p{max-width:40ch;margin-top:20px;font-size:17px;line-height:1.45;color:#5a534e}
+.hero__cta{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}
+/* плашка кейса поверх ролика */
+.casecard{position:absolute;right:max(24px,calc((100% - var(--max))/2 + 24px));bottom:56px;width:320px;background:var(--carbon);color:#fff;border-radius:12px;padding:16px;display:grid;grid-template-columns:1fr 84px;gap:14px;align-items:center}
+.casecard .label{color:#fff;opacity:.7}
+.casecard b{display:block;font-weight:400;font-size:14px;margin-top:8px;line-height:1.35}
+.casecard img{width:84px;height:84px;object-fit:cover;border-radius:8px}
+
+/* цифры */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:96px 0 0}
+.facts div{border-top:1px solid var(--carbon);padding-top:16px}
+.facts b{display:block;font-weight:300;font-size:52px;line-height:1}
+.facts span{display:block;margin-top:10px;font-size:14px;color:var(--mercury)}
+
+/* секции */
+.sec{padding-top:120px}
+.sec__head{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:end;margin-bottom:var(--gap)}
+.sec__head p{font-size:16px;color:#5a534e;max-width:44ch;justify-self:end}
+
+/* мастер */
+.master{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);align-items:center}
+.master img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:80px}
+.master .display{margin-top:20px}
+.master p{margin-top:24px;color:#5a534e;max-width:46ch}
+.creds{margin-top:36px;border-top:1px solid var(--carbon)}
+.creds div{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid rgba(50,45,42,.18);font-size:14px}
+.creds span{color:var(--mercury)}
+
+/* услуги: карточки со скруглением 80 */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.svc{display:block}
+.svc img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:80px;transition:border-radius .5s}
+.svc:hover img{border-radius:40px}
+.svc__t{display:flex;justify-content:space-between;align-items:baseline;margin-top:20px}
+.svc__t b{font-weight:300;font-size:32px}
+.svc__t span{font-size:14px;color:var(--mercury)}
+.svc p{margin-top:8px;font-size:14px;color:#5a534e;max-width:34ch}
+
+/* галерея кейсов: аккуратно, не на весь экран */
+.filters{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+.filters span{padding:10px 16px;border:1px solid var(--carbon);border-radius:100px;font-size:14px}
+.filters span.on{background:var(--carbon);color:#fff}
+.cases{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.case{background:var(--paper);border-radius:12px;padding:10px 10px 16px}
+.case img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px}
+.case b{display:block;font-weight:400;font-size:14px;margin-top:12px;padding:0 4px}
+.case span{display:block;font-size:12px;color:var(--mercury);margin-top:4px;padding:0 4px}
+
+/* до / после */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.ba figure{position:relative}
+.ba img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:80px}
+.ba figcaption{position:absolute;left:40px;bottom:32px}
+.ba figcaption .label{background:var(--vellum);padding:8px 12px;border-radius:100px}
+
+/* процесс: аккордеон */
+.process{display:grid;grid-template-columns:1fr 1.1fr;gap:var(--gap);align-items:start}
+.process img{width:100%;border-radius:80px;aspect-ratio:1;object-fit:cover}
+.acc{border-top:1px solid var(--carbon)}
+.acc details{border-bottom:1px solid var(--carbon);padding:22px 0}
+.acc summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;cursor:pointer;font-size:22px;font-weight:300}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary i{flex:none;width:40px;height:40px;border-radius:100px;border:1px solid var(--carbon);background:#fff;display:grid;place-items:center;font-style:normal;font-size:18px}
+.acc details[open] summary i::before{content:"−"}
+.acc details:not([open]) summary i::before{content:"+"}
+.acc p{margin-top:12px;font-size:14px;color:#5a534e;max-width:52ch}
+
+/* финальный призыв */
+.cta{margin-top:120px;position:relative;border-radius:80px;overflow:hidden;min-height:520px;display:flex;align-items:flex-end}
+.cta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cta__in{position:relative;padding:64px;color:#fff}
+.cta__in .display{color:#fff;max-width:14ch}
+.cta__in p{margin-top:16px;max-width:40ch;color:rgba(255,255,255,.8)}
+
+footer{margin-top:120px;background:var(--onyx);color:#fff;padding:64px 0 30px}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:24px;font-size:14px}
+.foot b{font-weight:400;font-size:22px;letter-spacing:.18em}
+.foot h4{font-weight:400;font-size:12px;text-transform:uppercase;letter-spacing:.12em;color:var(--mercury);margin-bottom:14px}
+.foot a,.foot p{display:block;opacity:.85;margin-bottom:8px}
+.foot__btm{display:flex;justify-content:space-between;margin-top:64px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);font-size:12px;color:var(--mercury)}
+
+/* проявление */
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+@media (max-width:900px){
+  .nav__links{display:none}
+  .facts{grid-template-columns:1fr 1fr}
+  .sec__head,.master,.process,.ba{grid-template-columns:1fr}
+  .sec__head p{justify-self:start}
+  .services{grid-template-columns:1fr}
+  .cases{grid-template-columns:1fr 1fr}
+  .casecard{display:none}
+  .foot{grid-template-columns:1fr 1fr}
+  .cta__in{padding:32px}
+  .master img,.svc img,.ba img,.process img,.cta{border-radius:48px}
+}
+@media (max-width:560px){
+  .hero__in{padding-bottom:32px}
+  .hero video,.hero > img{object-position:72% 20%;height:62%}
+  .hero{background:var(--vellum)}
+  .hero::after{content:"";position:absolute;left:0;right:0;top:40%;height:23%;background:linear-gradient(transparent,var(--vellum) 90%)}
+  .hero__in{z-index:2}
+  .hero h1{font-size:44px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav__logo" href="#">GRIN</a>
+  <div class="nav__links"><a href="#cases">Cases</a><a href="#services">Services</a><a href="#vasyl">About Vasyl</a><a href="#process">How it works</a></div>
+  <a class="btn" href="#contact">Send a scan →</a>
+</nav>
+
+<header class="hero">
+  <img src="img/hero.webp" alt="">
+  <video id="heroVideo" autoplay muted loop playsinline poster="img/hero.webp"></video>
+  <div class="hero__in">
+    <span class="label rv">Boutique dental lab · San Francisco</span>
+    <h1 class="rv" style="margin-top:20px">Smiles your patients will love showing</h1>
+    <p class="rv">Veneers, crowns and full-arch restorations designed by a CDT who is also a licensed dentist.</p>
+    <div class="hero__cta rv"><a class="btn btn--fill" href="#contact">Send a scan</a><a class="btn btn--ghost" href="#cases">See cases</a></div>
+  </div>
+  <a class="casecard rv" href="#cases"><div><span class="label">Case study</span><b>10 e.max veneers, layered by hand in 6 days</b></div><img src="img/veneers.webp" alt=""></a>
+</header>
+
+<main class="wrap">
+
+  <section class="facts">
+    <div class="rv"><b>17</b><span>years on both sides of the chair</span></div>
+    <div class="rv"><b>5–7</b><span>business days, standard turnaround</span></div>
+    <div class="rv"><b>CDT + DDS</b><span>certified technician and dentist</span></div>
+    <div class="rv"><b>USA</b><span>every restoration made in San Francisco</span></div>
+  </section>
+
+  <section class="sec" id="vasyl">
+    <div class="master">
+      <img class="rv" src="img/patient.webp" alt="Patient smile after restoration">
+      <div>
+        <span class="label rv">The master</span>
+        <h2 class="display rv">Vasyl Hryn, CDT. A dentist’s eye in every restoration</h2>
+        <p class="rv">A certified dental technician in the US and a licensed dentist from Ukraine. Vasyl understands the case from the chair, so restorations fit, function and look natural with fewer adjustments.</p>
+        <div class="creds rv">
+          <div><b>Training</b><span>Prosthodontic residency, functional protocols by Prof. Slavicek</span></div>
+          <div><b>Systems</b><span>e.max, Noritake EX-3, MIYO, multilayer zirconia</span></div>
+          <div><b>Workflow</b><span>Digital smile design, articulators, occlusal analysis</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="sec__head">
+      <div><span class="label rv">Services</span><h2 class="display rv" style="margin-top:20px">What we make</h2></div>
+      <p class="rv">Every case is treated as unique: we review photos, scans and goals with you before we start.</p>
+    </div>
+    <div class="services">
+      <a class="svc rv" href="#"><img src="img/veneers2.webp" alt="Veneers"><div class="svc__t"><b>Veneers</b><span>01</span></div><p>Hand-layered e.max and feldspathic veneers, shade-matched from patient photos.</p></a>
+      <a class="svc rv" href="#"><img src="img/allonx.webp" alt="All-on-X"><div class="svc__t"><b>All-on-X</b><span>02</span></div><p>Full-arch zirconia on implants, from try-in to a final that patients forget about.</p></a>
+      <a class="svc rv" href="#"><img src="img/implant.webp" alt="Implant crowns"><div class="svc__t"><b>Implant crowns</b><span>03</span></div><p>Screw-retained and cemented crowns on any platform, predictable fit every time.</p></a>
+    </div>
+  </section>
+
+  <section class="sec" id="cases">
+    <div class="sec__head">
+      <div><span class="label rv">Cases</span><h2 class="display rv" style="margin-top:20px">Selected work</h2></div>
+      <p class="rv">Each case shows material, units and turnaround, so you can see exactly what to expect.</p>
+    </div>
+    <div class="filters rv"><span class="on">All</span><span>Veneers</span><span>All-on-X</span><span>Crowns</span></div>
+    <div class="cases">
+      <div class="case rv"><img src="img/veneers.webp" alt=""><b>e.max veneers</b><span>10 units · 6 days</span></div>
+      <div class="case rv"><img src="img/arch-model.webp" alt=""><b>All-on-X, zirconia</b><span>full arch · 7 days</span></div>
+      <div class="case rv"><img src="img/crowns.webp" alt=""><b>Posterior crowns</b><span>e.max · 5 days</span></div>
+      <div class="case rv"><img src="img/macro.webp" alt=""><b>Anterior veneers</b><span>4 units · 6 days</span></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="sec__head">
+      <div><span class="label rv">Result</span><h2 class="display rv" style="margin-top:20px">Before and after</h2></div>
+      <p class="rv">What your patient sees in the mirror is the only result that matters.</p>
+    </div>
+    <div class="ba">
+      <figure class="rv"><img src="img/before.webp" alt="Before"><figcaption><span class="label">Before</span></figcaption></figure>
+      <figure class="rv"><img src="img/after.webp" alt="After"><figcaption><span class="label">After</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="sec" id="process">
+    <div class="process">
+      <img class="rv" src="img/print.webp" alt="Digital workflow">
+      <div>
+        <span class="label rv">How it works</span>
+        <h2 class="display rv" style="margin:20px 0 36px">From scan to delivery in 4 steps</h2>
+        <div class="acc rv">
+          <details open><summary>Send a scan<i></i></summary><p>Upload an intraoral scan or we pick up impressions in San Francisco. Download the RX form and attach patient photos.</p></details>
+          <details><summary>Design review<i></i></summary><p>Vasyl reviews photos and scans, proposes a digital smile design and confirms the plan with you.</p></details>
+          <details><summary>Crafting<i></i></summary><p>CAD/CAM precision plus hand-layered ceramics, checked on the articulator for function and occlusion.</p></details>
+          <details><summary>Delivery<i></i></summary><p>Standard cases in 5–7 business days, shipped with care and ready to seat.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta rv" id="contact">
+    <img src="img/arch-black.webp" alt="">
+    <div class="cta__in">
+      <span class="label" style="color:#fff">Work with us</span>
+      <h2 class="display" style="margin-top:20px">Ready to send your next case?</h2>
+      <p>Talk directly to the technician. We answer the same day.</p>
+      <div class="hero__cta"><a class="btn btn--light btn--fill" href="#">Send a scan</a><a class="btn btn--light" href="tel:+14154259175">+1 (415) 425-9175</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><b>GRIN</b><p class="muted" style="margin-top:14px;max-width:30ch">Boutique dental laboratory in San Francisco. All products made in the USA.</p></div>
+      <div><h4>Services</h4><a href="#">Veneers</a><a href="#">All-on-X</a><a href="#">Implant crowns</a></div>
+      <div><h4>Lab</h4><a href="#vasyl">About Vasyl</a><a href="#cases">Cases</a><a href="#process">How it works</a></div>
+      <div><h4>Contact</h4><a href="tel:+14154259175">+1 (415) 425-9175</a><a href="mailto:info@grindentallab.com">info@grindentallab.com</a><p>500 Sutter St. Suite 509</p></div>
+    </div>
+    <div class="foot__btm"><span>© 2026 Grin Dental Lab</span><span>Concept by Vika Akhramovich</span></div>
+  </div>
+</footer>
+
+<script>
+  // ролик подгружаем, если он есть; иначе остаётся фото
+  const v = document.getElementById('heroVideo');
+  fetch('img/hero.mp4', { method: 'HEAD' }).then(r => { if (r.ok) { v.src = 'img/hero.mp4'; v.play().catch(() => {}); } });
+  const io = new IntersectionObserver(es => es.forEach(e => e.target.classList.toggle('in', e.isIntersecting)), { threshold: .12 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
