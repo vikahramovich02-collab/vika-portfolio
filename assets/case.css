@@ -138,3 +138,8 @@
 .ch__media figcaption{max-width:var(--col);margin-left:auto;margin-right:auto;text-align:center}
 .ch__media .duo figcaption,.ch__media .trio figcaption{text-align:left;margin-left:0}
 @media (max-width:560px){ .facts,.nums{grid-template-columns:1fr} }
+/* «что сделано» вместо цифр */
+.nums.done{grid-template-columns:repeat(3,1fr)}
+.nums.done b{font-size:clamp(26px,2.4vw,36px);letter-spacing:-.03em}
+.nums.done span{margin-top:8px}
+@media (max-width:560px){.nums.done{grid-template-columns:1fr}}
