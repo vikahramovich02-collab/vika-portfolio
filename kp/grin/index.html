@@ -37,6 +37,29 @@ img{display:block}
 .rows div:last-child{border-bottom:1px solid var(--line)}
 .rows b{font-weight:500}.rows span{color:var(--soft);font-weight:300}
 .pill{display:inline-flex;height:40px;align-items:center;padding:0 18px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+
+/* v2: карточки, мини-макеты, носители */
+.grid5{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.del{background:#fff;border-radius:16px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:330px;box-shadow:0 1px 0 rgba(27,26,24,.04)}
+.del .n{font-family:"Instrument Serif",serif;font-size:72px;line-height:1;color:var(--accent)}
+.del b{display:block;font-size:24px;font-weight:500;margin-top:22px}
+.del span{display:block;font-size:16px;line-height:1.5;color:var(--soft);font-weight:300;margin-top:8px}
+.del.ph{padding:0;overflow:hidden}.del.ph img{width:100%;height:100%;object-fit:cover}
+.pages{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;margin-top:40px}
+.pg{background:#fff;border-radius:12px;padding:14px;height:370px;display:flex;flex-direction:column;gap:8px;box-shadow:0 18px 40px rgba(27,26,24,.08)}
+.pg .bar{height:6px;border-radius:3px;background:#ECE7DE}
+.pg .im{border-radius:8px;background:#1b1a18 center/cover}
+.pg .t{font-family:"Instrument Serif",serif;font-size:22px;line-height:1;margin-top:4px}
+.pg .l{height:5px;border-radius:3px;background:#EEE9E1}
+.pgcap{font-size:14px;line-height:1.45;color:var(--soft);font-weight:300;margin-top:14px}
+.pgcap b{display:block;color:var(--ink);font-weight:500;font-size:17px;margin-bottom:4px}
+.price{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.pc{background:#fff;border-radius:16px;padding:34px;min-height:440px;display:flex;flex-direction:column}
+.pc .n{font-size:12px;letter-spacing:.18em;color:var(--dim)}
+.pc b{font-size:28px;font-weight:500;margin-top:18px;line-height:1.2}
+.pc span{font-size:16px;line-height:1.5;color:var(--soft);font-weight:300;margin-top:10px;flex:1}
+.pc .p{font-family:"Instrument Serif",serif;font-size:68px;line-height:1;margin-top:18px}
+.pc .d{font-size:13px;color:var(--dim);margin-top:6px}
 @media print{ html,body{background:none} .deck{zoom:1} .s{margin:0;page-break-after:always;break-after:page} @page{size:1600px 900px;margin:0} }
 </style>
 </head>
@@ -60,17 +83,18 @@ img{display:block}
 <!-- 02 как я поняла задачу -->
 <section class="s">
   <div class="k">Как я поняла задачу</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:8px">
+  <div style="display:grid;grid-template-columns:.9fr 1.4fr;gap:64px;margin-top:8px">
     <div>
-      <h2>Доктор заходит на сайт и сразу видит <i>мастера</i> и его работы</h2>
-      <p style="margin-top:32px;max-width:560px">Grin это бутиковая лаборатория в Сан-Франциско. Главный актив у вас уже есть: Василий одновременно CDT в США и врач-стоматолог с 17 годами опыта. Задача в том, чтобы это было видно с первого экрана, а работы выглядели как в хорошем портфолио, а не вылетали на весь экран.</p>
+      <h2>Доктор заходит и сразу видит <i>мастера</i> и его работы</h2>
+      <p style="margin-top:28px">Главный актив у вас уже есть. Василий одновременно CDT в США и врач-стоматолог с 17 годами опыта. Нужно, чтобы это читалось с первого экрана, а работы выглядели как хорошее портфолио.</p>
     </div>
-    <div class="rows" style="margin-top:40px">
-      <div><b>Ребрендинг</b><span>Современный стиль, к которому не придётся возвращаться 2–3 года</span></div>
-      <div><b>Сайт</b><span>Работы в аккуратной галерее и по направлениям, квалификация мастера на виду</span></div>
-      <div><b>Мобильная версия</b><span>Под все размеры новых iPhone, доктора смотрят с телефона между пациентами</span></div>
-      <div><b>Журнал услуг</b><span>История лаборатории, мастер, услуги и фото работ. С ним отдел продаж приходит в клинику</span></div>
-      <div><b>КП</b><span>Короткая презентация для докторов, которую легко отправить после звонка</span></div>
+    <div class="grid5">
+      <div class="del"><span class="n">01</span><div><b>Ребрендинг</b><span>Стиль, к которому не придётся возвращаться 2–3 года</span></div></div>
+      <div class="del"><span class="n">02</span><div><b>Сайт</b><span>Галерея работ по направлениям, мастер на виду</span></div></div>
+      <div class="del ph"><img src="img/p-implant.webp"></div>
+      <div class="del"><span class="n">03</span><div><b>Мобильная</b><span>Под все размеры новых iPhone</span></div></div>
+      <div class="del"><span class="n">04</span><div><b>Журнал</b><span>С ним отдел продаж приходит в клинику</span></div></div>
+      <div class="del"><span class="n">05</span><div><b>КП</b><span>Короткая презентация для докторов после звонка</span></div></div>
     </div>
   </div>
   <div class="brand">Grin Dental Lab</div><div class="num">02</div>
@@ -152,38 +176,51 @@ img{display:block}
 <!-- 07 структура сайта -->
 <section class="s">
   <div class="k">Структура нового сайта</div>
-  <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:72px;margin-top:8px">
-    <div>
-      <h2>Каждая страница отвечает на <i>вопрос доктора</i></h2>
-      <p style="margin-top:28px;max-width:520px">Сайт на английском, под американских докторов. Помогу с текстами: напишу структуру и формулировки на основе ваших материалов.</p>
-    </div>
-    <div class="rows">
-      <div><b>Главная</b><span>Кто вы, почему вам можно доверить пациента, лучшие кейсы, как начать</span></div>
-      <div><b>Cases</b><span>Галерея с фильтром: veneers, crowns, all-on-X. Карточка кейса: фото, материал, единицы, срок</span></div>
-      <div><b>Products</b><span>Veneer package, All-on-X, implant crowns: что входит, материалы, сроки</span></div>
-      <div><b>About Vasyl</b><span>CDT + DDS, 17 лет, обучение, философия. Главный козырь отдельной страницей</span></div>
-      <div><b>Work with us</b><span>Как отправить скан, сроки, подбор цвета, RX-форма, доставка</span></div>
-      <div><b>Journal</b><span>Статьи для докторов о материалах и протоколах (у вас уже есть база)</span></div>
-      <div><b>Contact</b><span>Короткая форма, телефон, адрес на Sutter St.</span></div>
-    </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:64px">
+    <h2 style="max-width:760px">Каждая страница отвечает на <i>вопрос доктора</i></h2>
+    <p style="max-width:420px;font-size:16px">Сайт на английском, под американских докторов. Помогу с текстами на основе ваших материалов.</p>
   </div>
+  <div class="pages"><div class="pg"><div class="bar"></div><div class="t">Home</div><div class="im" style="height:170px;background-image:url(img/p-veneers.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div></div><div class="pg"><div class="bar"></div><div class="t">Cases</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><div class="im" style="height:80px;background-image:url(img/p-veneers.webp)"></div><div class="im" style="height:80px;background-image:url(img/p-arch.webp)"></div><div class="im" style="height:80px;background-image:url(img/p-implant.webp)"></div><div class="im" style="height:80px;background-image:url(img/p-crowns.webp)"></div></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div></div><div class="pg"><div class="bar"></div><div class="t">Products</div><div class="im" style="height:170px;background-image:url(img/p-crowns.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div></div><div class="pg"><div class="bar"></div><div class="t">Vasyl</div><div class="im" style="height:170px;background-image:url(img/p-macro.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div><div class="l" style="width:60%"></div></div><div class="pg"><div class="bar"></div><div class="t">Send a scan</div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div><div class="l" style="width:60%"></div></div><div class="pg"><div class="bar"></div><div class="t">Journal</div><div class="im" style="height:170px;background-image:url(img/p-arch.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div></div><div class="pg"><div class="bar"></div><div class="t">Contact</div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div><div class="l" style="width:60%"></div></div></div>
+  <div class="pages" style="margin-top:0"><div class="pgcap"><b>Главная</b>Кто вы и почему вам можно доверить пациента</div><div class="pgcap"><b>Cases</b>Галерея с фильтром: veneers, crowns, all-on-X</div><div class="pgcap"><b>Products</b>Пакеты: что входит, материалы, сроки</div><div class="pgcap"><b>About Vasyl</b>CDT + DDS, 17 лет, обучение у Славичека</div><div class="pgcap"><b>Work with us</b>Скан, RX-форма, цвет, доставка</div><div class="pgcap"><b>Journal</b>Статьи для докторов, база уже есть</div><div class="pgcap"><b>Contact</b>Короткая форма и адрес на Sutter St.</div></div>
   <div class="brand">Grin Dental Lab</div><div class="num">07</div>
 </section>
 
 <!-- 08 ребрендинг -->
 <section class="s">
   <div class="k">Ребрендинг</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:8px">
+  <div style="display:grid;grid-template-columns:.85fr 1.5fr;gap:56px;margin-top:8px">
     <div>
       <h2>Один стиль на сайте, в журнале и в <i>коробке с работой</i></h2>
-      <p style="margin-top:28px;max-width:560px">Бренд лаборатории живёт не только на сайте. Доктор держит в руках коробку с коронкой, RX-форму и визитку. Всё это должно выглядеть так же дорого, как ваша керамика.</p>
+      <p style="margin-top:28px">Доктор держит в руках коробку с коронкой, RX-форму и визитку. Всё это должно выглядеть так же дорого, как ваша керамика.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px"><span class="pill">Логотип и знак</span><span class="pill">Палитра и шрифты</span><span class="pill">Фото-стиль</span><span class="pill">Носители</span><span class="pill">Мини-гайд PDF</span></div>
     </div>
-    <div class="rows" style="margin-top:20px">
-      <div><b>Логотип и знак</b><span>Обновлённый знак GRIN, версии для тёмного и светлого фона</span></div>
-      <div><b>Палитра и шрифты</b><span>Цвета, типографика, правила сочетаний</span></div>
-      <div><b>Фото-стиль</b><span>Как снимать и подписывать работы, чтобы галерея была единой</span></div>
-      <div><b>Носители</b><span>Визитка, RX-форма, наклейка на коробку, шаблоны для Instagram и LinkedIn</span></div>
-      <div><b>Мини-гайд</b><span>PDF с правилами, чтобы бренд держался и без дизайнера</span></div>
+    <div style="position:relative;height:690px;background:#E4DED3;border-radius:20px;overflow:hidden">
+      <!-- логотип -->
+      <div style="position:absolute;left:44px;top:44px;width:380px;height:250px;background:#1B1A18;border-radius:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#F3F0EA;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <div style="width:54px;height:54px;border:1px solid #C9B89C;border-radius:50%;display:grid;place-items:center;font-family:'Instrument Serif';font-size:30px;font-style:italic;color:#C9B89C">g</div>
+        <div class="serif" style="font-size:64px;letter-spacing:.14em;margin-top:14px">GRIN</div>
+        <div style="font-size:10px;letter-spacing:.32em;color:#9b958b;margin-top:4px">DENTAL LAB · SAN FRANCISCO</div>
+      </div>
+      <!-- визитка -->
+      <div style="position:absolute;left:470px;top:70px;width:340px;height:200px;background:#F7F4EE;border-radius:8px;padding:26px;transform:rotate(4deg);box-shadow:0 24px 50px rgba(27,26,24,.2)">
+        <div class="serif" style="font-size:22px;letter-spacing:.14em">GRIN</div>
+        <div style="position:absolute;left:26px;bottom:24px"><div class="serif" style="font-size:24px">Vasyl Hryn, <i>CDT</i></div><div style="font-size:11px;color:var(--dim);margin-top:6px">Founder · +1 (415) 425-9175</div></div>
+      </div>
+      <!-- RX форма -->
+      <div style="position:absolute;left:60px;top:330px;width:330px;height:420px;background:#fff;border-radius:6px;padding:28px;transform:rotate(-3deg);box-shadow:0 24px 50px rgba(27,26,24,.16)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="serif" style="font-size:20px;letter-spacing:.14em">GRIN</span><span style="font-size:10px;letter-spacing:.2em;color:var(--dim)">RX FORM</span></div>
+        <div class="serif" style="font-size:34px;margin-top:26px">Lab <i>prescription</i></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Doctor</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Patient</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Restoration</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Material</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Shade</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Due date</span><span>__________</span></div>
+      </div>
+      <!-- коробка -->
+      <div style="position:absolute;right:46px;bottom:40px;width:400px;height:290px;background:#1B1A18;border-radius:10px;box-shadow:0 34px 60px rgba(0,0,0,.3);overflow:hidden">
+        <img src="img/p-crowns.webp" style="width:100%;height:62%;object-fit:cover;opacity:.9">
+        <div style="padding:18px 22px;color:#F3F0EA;display:flex;justify-content:space-between;align-items:center"><span class="serif" style="font-size:28px;letter-spacing:.14em">GRIN</span><span style="font-size:10px;letter-spacing:.24em;color:#C9B89C">HANDCRAFTED IN SF</span></div>
+      </div>
+      <!-- палитра -->
+      <div style="position:absolute;left:480px;top:300px;display:flex;gap:8px">
+        <span style="width:44px;height:44px;border-radius:50%;background:#F3F0EA;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#E9E4DB;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#C9B89C;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#8C7B63;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#1B1A18;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span>
+      </div>
     </div>
   </div>
   <div class="brand">Grin Dental Lab</div><div class="num">08</div>
@@ -213,16 +250,17 @@ img{display:block}
 <!-- 10 КП -->
 <section class="s">
   <div class="k">Коммерческое предложение для докторов</div>
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:8px">
+  <div style="display:grid;grid-template-columns:.85fr 1.5fr;gap:56px;margin-top:8px">
     <div>
       <h2>8–12 слайдов, которые доктор <i>дочитает</i></h2>
-      <p style="margin-top:28px;max-width:560px">Короткая версия журнала для отправки после звонка или встречи. Шаблон, в котором отдел продаж сам меняет название клиники и нужные услуги.</p>
-      <div class="rows" style="margin-top:36px">
-        <div><b>Структура</b><span>Кто вы, мастер, услуги и сроки, кейсы, как начать работу</span></div>
-        <div><b>Форматы</b><span>PDF и редактируемый файл (Keynote / PowerPoint / Figma)</span></div>
-      </div>
+      <p style="margin-top:28px">Короткая версия журнала для отправки после звонка. Шаблон, в котором отдел продаж сам меняет название клиники и нужные услуги.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px"><span class="pill">PDF</span><span class="pill">Keynote / PowerPoint</span><span class="pill">Figma</span></div>
     </div>
-    <img class="shot" src="img/p-macro.webp" style="height:640px;object-fit:cover">
+    <div style="position:relative;height:690px;background:#E4DED3;border-radius:20px;overflow:hidden">
+      <div style="position:absolute;left:60px;top:70px;width:560px;height:315px;background:#141312;border-radius:10px;overflow:hidden;transform:rotate(-4deg);box-shadow:0 30px 60px rgba(0,0,0,.25)"><img src="img/p-crowns.webp" style="width:100%;height:100%;object-fit:cover;opacity:.8"><div class="serif" style="position:absolute;left:28px;bottom:24px;color:#F3F0EA;font-size:48px;line-height:.9">Grin <i style="color:#C9B89C">Dental</i><br>Lab</div></div>
+      <div style="position:absolute;right:50px;top:200px;width:560px;height:315px;background:#F7F4EE;border-radius:10px;overflow:hidden;transform:rotate(3deg);box-shadow:0 30px 60px rgba(0,0,0,.2);display:grid;grid-template-columns:1fr 1fr"><div style="padding:28px"><div style="font-size:9px;letter-spacing:.2em;color:var(--dim)">PRODUCTS · 04</div><div class="serif" style="font-size:40px;line-height:.95;margin-top:16px">The <i>veneer</i><br>package</div><div style="margin-top:18px"><div style="border-top:1px solid #E6E1D8;padding:7px 0;font-size:10px;color:var(--dim)">e.max, Noritake EX-3, MIYO</div><div style="border-top:1px solid #E6E1D8;padding:7px 0;font-size:10px;color:var(--dim)">DSD, mock-up, final</div><div style="border-top:1px solid #E6E1D8;padding:7px 0;font-size:10px;color:var(--dim)">5–7 business days</div></div></div><img src="img/p-macro.webp" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="position:absolute;left:120px;bottom:40px;width:480px;height:270px;background:#F7F4EE;border-radius:10px;overflow:hidden;transform:rotate(-1.5deg);box-shadow:0 30px 60px rgba(0,0,0,.18);padding:26px"><div style="font-size:9px;letter-spacing:.2em;color:var(--dim)">CASES · 07</div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px"><img src="img/p-veneers.webp" style="width:100%;height:150px;object-fit:cover;border-radius:6px"><img src="img/p-arch.webp" style="width:100%;height:150px;object-fit:cover;border-radius:6px"><img src="img/p-implant.webp" style="width:100%;height:150px;object-fit:cover;border-radius:6px"></div></div>
+    </div>
   </div>
   <div class="brand">Grin Dental Lab</div><div class="num">10</div>
 </section>
@@ -253,22 +291,20 @@ img{display:block}
 <!-- 12 этапы и стоимость -->
 <section class="s">
   <div class="k">Этапы, сроки и стоимость</div>
-  <div style="display:grid;grid-template-columns:1.3fr 1fr;gap:64px;margin-top:20px">
-    <div class="rows">
-      <div style="grid-template-columns:1fr 130px 120px"><b>1. Бриф, аудит, мудборд</b><span>3–4 дня</span><span>входит</span></div>
-      <div style="grid-template-columns:1fr 130px 120px"><b>2. Ребрендинг</b><span>1–1,5 недели</span><span>$1 200</span></div>
-      <div style="grid-template-columns:1fr 130px 120px"><b>3. Дизайн сайта: до 8 страниц, десктоп и мобильная</b><span>2 недели</span><span>$1 800</span></div>
-      <div style="grid-template-columns:1fr 130px 120px"><b>4. Журнал услуг, 24–32 страницы</b><span>1,5 недели</span><span>$1 100</span></div>
-      <div style="grid-template-columns:1fr 130px 120px"><b>5. Коммерческое предложение</b><span>3–4 дня</span><span>$450</span></div>
-      <div style="grid-template-columns:1fr 130px 120px"><b>Опционально: вёрстка сайта</b><span>1–2 недели</span><span>от $1 500</span></div>
-    </div>
-    <div style="background:var(--dark);color:#F3F0EA;border-radius:18px;padding:40px">
-      <div class="k" style="color:#9b958b">Пакет целиком</div>
-      <div class="serif" style="font-size:96px;line-height:1;margin-top:24px">$3 900</div>
-      <p style="margin-top:8px;color:#9b958b;text-decoration:line-through">$4 550 по отдельности</p>
-      <p style="margin-top:24px;color:#bdb7ad;font-size:16px">Ребрендинг, сайт, журнал и КП. Около 5 недель. Оплата по этапам: 50% на старте, 50% по готовности.</p>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px">
+    <h2>Около <i>5 недель</i> на весь пакет</h2>
+    <div style="background:var(--dark);color:#F3F0EA;border-radius:16px;padding:22px 30px;display:flex;align-items:center;gap:28px">
+      <div><div style="font-size:11px;letter-spacing:.2em;color:#9b958b">ПАКЕТ ЦЕЛИКОМ</div><div style="font-size:13px;color:#9b958b;margin-top:6px;text-decoration:line-through">$4 550 по отдельности</div></div>
+      <div class="serif" style="font-size:64px;line-height:1">$3 900</div>
     </div>
   </div>
+  <div class="price">
+    <div class="pc"><span class="n">01 · 1–1,5 НЕДЕЛИ</span><b>Ребрендинг</b><span>Логотип, палитра, шрифты, фото-стиль, носители, мини-гайд. Бриф и мудборд входят</span><div class="p">$1 200</div></div>
+    <div class="pc"><span class="n">02 · 2 НЕДЕЛИ</span><b>Дизайн сайта</b><span>До 8 страниц, десктоп и мобильная под все iPhone, тексты вместе с вами</span><div class="p">$1 800</div></div>
+    <div class="pc"><span class="n">03 · 1,5 НЕДЕЛИ</span><b>Журнал услуг</b><span>24–32 страницы, файлы для печати и лёгкий PDF для рассылки</span><div class="p">$1 100</div></div>
+    <div class="pc"><span class="n">04 · 3–4 ДНЯ</span><b>КП для докторов</b><span>8–12 слайдов, редактируемый шаблон для отдела продаж</span><div class="p">$450</div></div>
+  </div>
+  <p style="margin-top:22px;font-size:14px">Оплата по этапам: 50% на старте, 50% по готовности. Опционально: вёрстка сайта от $1 500, 1–2 недели.</p>
   <div class="brand">Grin Dental Lab</div><div class="num">12</div>
 </section>
 
