@@ -53,8 +53,6 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
   .s [style*="margin-top:auto"]{margin-top:24px!important}
   .s [style*="width:1088px"]{width:100%!important;height:auto!important}
   .live{aspect-ratio:16/10;height:auto!important}
-  .live iframe{display:none}
-  .live .print-only{display:block}
   .top{grid-template-columns:auto 1fr auto;font-size:12px;gap:12px}
   .top > :nth-child(3){display:none}
   h1,.s h1[style]{font-size:64px!important;line-height:.9}
@@ -68,7 +66,7 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
   .s h1[style*="150px"]{font-size:48px!important}
   .s a[style*="border-radius:999px"]{align-self:stretch!important;justify-content:center;margin-top:28px!important}
 }
-@media print{ .print-only{display:block} .live iframe{display:none} }
+@media print{ .print-only{display:block} .live video{display:none} }
 @media print{ html,body{background:none} .deck{zoom:1} .s{margin:0;break-after:page} @page{size:1600px 900px;margin:0} }
 </style>
 </head>
@@ -130,6 +128,38 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
   </div>
 </section>
 
+<!-- 5S концепт сайта -->
+<section class="s">
+  <div class="top"><span>05.</span><span>Концепт главной · вариант 1</span><span class="dim">живой прототип · смотрите в движении</span><a href="https://vikahramovich02-collab.github.io/vika-portfolio/kp/grin/site/" style="color:inherit;text-decoration:none">открыть сайт ↗</a></div>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1088px;gap:48px;padding-top:40px;align-items:start">
+    <div style="display:flex;flex-direction:column;height:680px">
+      <h2 style="font-size:64px">Эмоция с первого экрана</h2>
+      <p style="margin-top:24px;font-size:18px">Тот же стиль без карточки: только улыбка и заголовок. Акцент на результате, который видит пациент.</p>
+      <ul class="rows" style="margin-top:auto"><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Ощущение</span><span style="color:var(--fg)">светло и эмоционально</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Как выглядит</span><span style="color:var(--fg)">красивая улыбка на весь экран</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Чем поможет</span><span style="color:var(--fg)">показывает результат, ради которого приходят</span></li></ul>
+    </div>
+    <div class="live" style="width:1088px;height:680px;border-radius:8px;overflow:hidden;position:relative;background:#f2f3f5">
+      <video src="img/concept-emotion.mp4" poster="img/site-hero.webp" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
+      <img class="print-only" src="img/site-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    </div>
+  </div>
+</section>
+
+<!-- 5D концепт для докторов -->
+<section class="s">
+  <div class="top"><span>05.</span><span>Концепт главной · вариант 2</span><span class="dim">живой прототип · смотрите в движении</span><a href="https://vikahramovich02-collab.github.io/vika-portfolio/kp/grin/site/doctors.html" style="color:inherit;text-decoration:none">открыть сайт ↗</a></div>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1088px;gap:48px;padding-top:40px;align-items:start">
+    <div style="display:flex;flex-direction:column;height:680px">
+      <h2 style="font-size:64px">Сразу видно работу лаборатории</h2>
+      <p style="margin-top:24px;font-size:18px">Ролик с улыбкой и карточка кейса поверх: материал, объём, срок и мастер. Доктор сразу понимает, что это лаборатория, а не клиника.</p>
+      <ul class="rows" style="margin-top:auto"><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Ощущение</span><span style="color:var(--fg)">светло, чисто, по-медицински</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Как выглядит</span><span style="color:var(--fg)">улыбка и карточка с примером работы</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Чем поможет</span><span style="color:var(--fg)">доктор сразу видит, что это лаборатория</span></li></ul>
+    </div>
+    <div class="live" style="width:1088px;height:680px;border-radius:8px;overflow:hidden;position:relative;background:#f2f3f5">
+      <video src="img/concept-doctors.mp4" poster="img/site-doctors.webp" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block"></video>
+      <img class="print-only" src="img/site-doctors.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    </div>
+  </div>
+</section>
+
 <!-- 5A направление -->
 <section class="s">
   <div class="top"><span>04.</span><span>Направление A</span><span class="dim">1 из 4 · выберем одно на старте</span><span>Grin Dental Lab</span></div>
@@ -182,38 +212,6 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
   </div>
 </section>
 
-<!-- 5D концепт для докторов -->
-<section class="s">
-  <div class="top"><span>05.</span><span>Концепт главной · вариант 1</span><span class="dim">живой прототип · смотрите в движении</span><a href="https://vikahramovich02-collab.github.io/vika-portfolio/kp/grin/site/doctors.html" style="color:inherit;text-decoration:none">открыть сайт ↗</a></div>
-  <div style="flex:1;display:grid;grid-template-columns:1fr 1088px;gap:48px;padding-top:40px;align-items:start">
-    <div style="display:flex;flex-direction:column;height:680px">
-      <h2 style="font-size:64px">Сразу видно работу лаборатории</h2>
-      <p style="margin-top:24px;font-size:18px">Ролик с улыбкой и карточка кейса поверх: материал, объём, срок и мастер. Доктор сразу понимает, что это лаборатория, а не клиника.</p>
-      <ul class="rows" style="margin-top:auto"><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Ощущение</span><span style="color:var(--fg)">светло, чисто, по-медицински</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Как выглядит</span><span style="color:var(--fg)">улыбка и карточка с примером работы</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Чем поможет</span><span style="color:var(--fg)">доктор сразу видит, что это лаборатория</span></li></ul>
-    </div>
-    <div class="live" style="width:1088px;height:680px;border-radius:8px;overflow:hidden;position:relative;background:#f2f3f5">
-      <iframe src="site/doctors.html" title="Концепт сайта Grin" scrolling="no" style="width:1440px;height:900px;border:0;transform:scale(.7556);transform-origin:0 0;pointer-events:none"></iframe>
-      <img class="print-only" src="img/site-doctors.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    </div>
-  </div>
-</section>
-
-<!-- 5S концепт сайта -->
-<section class="s">
-  <div class="top"><span>05.</span><span>Концепт главной · вариант 2</span><span class="dim">живой прототип · смотрите в движении</span><a href="https://vikahramovich02-collab.github.io/vika-portfolio/kp/grin/site/" style="color:inherit;text-decoration:none">открыть сайт ↗</a></div>
-  <div style="flex:1;display:grid;grid-template-columns:1fr 1088px;gap:48px;padding-top:40px;align-items:start">
-    <div style="display:flex;flex-direction:column;height:680px">
-      <h2 style="font-size:64px">Эмоция с первого экрана</h2>
-      <p style="margin-top:24px;font-size:18px">Тот же стиль без карточки: только улыбка и заголовок. Акцент на результате, который видит пациент.</p>
-      <ul class="rows" style="margin-top:auto"><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Ощущение</span><span style="color:var(--fg)">светло и эмоционально</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Как выглядит</span><span style="color:var(--fg)">красивая улыбка на весь экран</span></li><li style="grid-template-columns:120px 1fr;padding:14px 0"><span>Чем поможет</span><span style="color:var(--fg)">показывает результат, ради которого приходят</span></li></ul>
-    </div>
-    <div class="live" style="width:1088px;height:680px;border-radius:8px;overflow:hidden;position:relative;background:#f2f3f5">
-      <iframe src="site/index.html" title="Концепт сайта Grin" scrolling="no" style="width:1440px;height:900px;border:0;transform:scale(.7556);transform-origin:0 0;pointer-events:none"></iframe>
-      <img class="print-only" src="img/site-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-    </div>
-  </div>
-</section>
-
 <!-- 6 кто я -->
 <section class="s">
   <div class="top"><span>06.</span><span>Кто я</span><span class="dim">опыт и подход</span><a href="https://vikahramovich02-collab.github.io/vika-portfolio/" style="color:inherit;text-decoration:none">портфолио ↗</a></div>
@@ -239,14 +237,14 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding-top:36px">
     <figure style="margin:0;display:flex;flex-direction:column">
       <video class="ph" src="img/pf-mary.mp4" poster="img/pf-mary-poster.webp" autoplay muted loop playsinline style="height:440px"></video>
-      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)"><b style="font-weight:500;font-size:32px;letter-spacing:-.03em">Mary AI</b><span class="dim" style="font-size:14px">с июля 2025</span></div>
-      <p style="margin-top:12px;font-size:16px">Платформа, три сайта, питч-дек на $3M, брошюры, бейджи и ролики</p>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)"><a href="https://maryrose.by" style="color:inherit;text-decoration:none;font-weight:500;font-size:32px;letter-spacing:-.03em">Mary AI ↗</a><span class="dim" style="font-size:14px">с июля 2025</span></div>
+      <p style="margin-top:12px;font-size:16px">Весь арт-дирекшн продукта: от платформы и сайтов до презентаций, печати и роликов</p>
     </figure><figure style="margin:0;display:flex;flex-direction:column">
       <img class="ph" src="img/pf-it.webp" style="height:440px">
-      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)"><b style="font-weight:500;font-size:32px;letter-spacing:-.03em">InTreatment</b><span class="dim" style="font-size:14px">с весны 2026</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)"><a href="https://intreatment.online" style="color:inherit;text-decoration:none;font-weight:500;font-size:32px;letter-spacing:-.03em">InTreatment ↗</a><span class="dim" style="font-size:14px">май — август 2026</span></div>
       <p style="margin-top:12px;font-size:16px">Сайт на 14 страниц, чат-подбор вместо каталога, кабинеты</p>
     </figure><figure style="margin:0;display:flex;flex-direction:column">
-      <img class="ph" src="img/pf-al-site.webp" style="height:440px;object-position:left top">
+      <video class="ph" src="img/pf-al-mock.mp4" poster="img/pf-al-mock.webp" autoplay muted loop playsinline style="height:440px"></video>
       <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:20px;padding-top:12px;border-top:1px solid var(--line)"><a href="https://albumchik.by" style="color:inherit;text-decoration:none;font-weight:500;font-size:32px;letter-spacing:-.03em">ALBUMCHIK ↗</a><span class="dim" style="font-size:14px">мой проект</span></div>
       <p style="margin-top:12px;font-size:16px">Журналы о людях: съёмка, вёрстка, печать и сайт albumchik.by</p>
     </figure>
@@ -254,9 +252,36 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
   <a href="https://vikahramovich02-collab.github.io/vika-portfolio/" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:12px;height:64px;padding:0 32px;border-radius:999px;background:#e8e9ea;color:#111;text-decoration:none;font-size:20px;font-weight:500">Смотреть всё портфолио ↗</a>
 </section>
 
+<!-- 7J журналы -->
+<section class="s">
+  <div class="top"><span>08.</span><span>Журналы</span><span class="dim">мой проект ALBUMCHIK</span><span>Grin Dental Lab</span></div>
+  <div style="display:grid;grid-template-columns:420px 1fr;gap:48px;padding-top:36px;align-items:start">
+    <div style="display:flex;flex-direction:column;height:740px">
+      <h2 style="font-size:64px">Делаю журналы</h2>
+      <p style="margin-top:24px;font-size:18px">Специализируюсь на журналах и альбомах: сюжет, отбор кадров, вёрстка как в глянце и подготовка к печати. Так же соберу журнал услуг Grin.</p>
+      <a href="https://albumchik.by" style="margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;height:56px;padding:0 28px;border-radius:999px;background:#e8e9ea;color:#111;text-decoration:none;font-size:18px;font-weight:500">Перейти на albumchik.by ↗</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-content:center;height:740px"><img src="img/mg-polina-02.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover"><img src="img/mg-pak-04.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover"><img src="img/mg-polina-07.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover"><img src="img/mg-pak-07.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover"><img src="img/mg-polina-14.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover"><img src="img/mg-pak-11.webp" style="width:100%;aspect-ratio:4/3;object-fit:cover"></div>
+  </div>
+</section>
+
+<!-- 7P презентации -->
+<section class="s">
+  <div class="top"><span>09.</span><span>Презентации</span><span class="dim">инвесторам и клиентам</span><span>Grin Dental Lab</span></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;padding-top:32px"><h2 style="font-size:64px">Презентации, которые дочитывают</h2></div>
+  <div style="margin-top:28px"><div style="display:grid;grid-template-columns:200px repeat(4,1fr);gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line)"><div><b style="font-weight:500;font-size:22px">Naroch AI-Resort</b><p class="cap" style="margin-top:6px">инвестиционная презентация</p></div><img src="img/pr-hn01.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/pr-hn06.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/pr-hn07.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/pr-hn12.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"></div><div style="display:grid;grid-template-columns:200px repeat(4,1fr);gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line)"><div><b style="font-weight:500;font-size:22px">Mary AI</b><p class="cap" style="margin-top:6px">питч-дек на $3M</p></div><img src="img/deck-s01.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/deck-s08.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/deck-s10.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/deck-s16.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"></div><div style="display:grid;grid-template-columns:200px repeat(4,1fr);gap:14px;align-items:center;padding:14px 0;border-top:1px solid var(--line)"><div><b style="font-weight:500;font-size:22px">МТС Бизнес</b><p class="cap" style="margin-top:6px">питч для корпорации</p></div><img src="img/pr-hm22.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/pr-hm18.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/pr-hm24.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"><img src="img/pr-hm39.webp" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px"></div></div>
+</section>
+
+<!-- 7S этапы -->
+<section class="s">
+  <div class="top"><span>10.</span><span>Как будем работать</span><span class="dim">этапы сотрудничества</span><span>Grin Dental Lab</span></div>
+  <h2 style="font-size:64px;padding-top:32px">Этапы сотрудничества</h2>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-top:auto"><div style="border-top:1px solid var(--fg);padding-top:16px;min-height:300px;display:flex;flex-direction:column"><span class="cap" style="margin:0">01</span><b style="font-weight:500;font-size:28px;margin-top:16px">Знакомство</b><p style="margin-top:12px;font-size:17px">созвон 30 минут, бриф, примеры, которые нравятся</p><span class="dim" style="margin-top:auto;font-size:15px">1–2 дня</span></div><div style="border-top:1px solid var(--fg);padding-top:16px;min-height:300px;display:flex;flex-direction:column"><span class="cap" style="margin:0">02</span><b style="font-weight:500;font-size:28px;margin-top:16px">Направление</b><p style="margin-top:12px;font-size:17px">мудборд и 2–3 варианта стиля, выбираем один</p><span class="dim" style="margin-top:auto;font-size:15px">3–4 дня</span></div><div style="border-top:1px solid var(--fg);padding-top:16px;min-height:300px;display:flex;flex-direction:column"><span class="cap" style="margin:0">03</span><b style="font-weight:500;font-size:28px;margin-top:16px">Дизайн</b><p style="margin-top:12px;font-size:17px">бренд, сайт, журнал и КП в выбранном стиле</p><span class="dim" style="margin-top:auto;font-size:15px">3–4 недели</span></div><div style="border-top:1px solid var(--fg);padding-top:16px;min-height:300px;display:flex;flex-direction:column"><span class="cap" style="margin:0">04</span><b style="font-weight:500;font-size:28px;margin-top:16px">Правки</b><p style="margin-top:12px;font-size:17px">показываю по этапам, правим вместе</p><span class="dim" style="margin-top:auto;font-size:15px">по ходу</span></div><div style="border-top:1px solid var(--fg);padding-top:16px;min-height:300px;display:flex;flex-direction:column"><span class="cap" style="margin:0">05</span><b style="font-weight:500;font-size:28px;margin-top:16px">Передача</b><p style="margin-top:12px;font-size:17px">исходники, файлы для печати, сайт для разработки</p><span class="dim" style="margin-top:auto;font-size:15px">1–2 дня</span></div></div>
+</section>
+
 <!-- 8 сроки и цена -->
 <section class="s">
-  <div class="top"><span>08.</span><span>Сроки и стоимость</span><span class="dim">около 5 недель</span><span>Grin Dental Lab</span></div>
+  <div class="top"><span>11.</span><span>Сроки и стоимость</span><span class="dim">около 5 недель</span><span>Grin Dental Lab</span></div>
   <div style="flex:1;display:grid;grid-template-columns:1.3fr 1fr;gap:64px;padding-top:40px">
     <ul class="rows">
       <li style="grid-template-columns:64px 1fr 160px 120px"><span class="n">01</span><b>Ребрендинг</b><span>1–1,5 недели</span><b>$1 200</b></li>
@@ -276,7 +301,7 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
 
 <!-- 9 следующий шаг -->
 <section class="s">
-  <div class="top"><span>09.</span><span>Следующий шаг</span><span class="dim">Minsk · remote</span><span>2026©</span></div>
+  <div class="top"><span>12.</span><span>Следующий шаг</span><span class="dim">Minsk · remote</span><span>2026©</span></div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:flex-end">
     <h1 style="font-size:150px">Буду рада<br>сотрудничеству</h1>
     <p style="margin-top:28px;max-width:860px">Представленные макеты — это референсы и первые идеи. Чтобы глубже погрузиться в проект, мне нужно подробнее пообщаться с вами: давайте созвонимся на 30 минут, обсудим задачи и примеры, которые вам нравятся.</p>
