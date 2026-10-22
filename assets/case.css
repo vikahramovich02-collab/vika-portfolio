@@ -118,3 +118,23 @@
 .lead{max-width:52ch;font-size:clamp(15px,1.1vw,17px);line-height:1.55;letter-spacing:0;color:var(--dim)}
 .intro__cta .btn{height:40px;padding:0 18px;font-size:13px}
 .facts dd{font-size:14px}
+
+/* одна колонка по центру (Вика, 22.10): узкий контейнер с текстом, между ним крупные картинки */
+:root{--col:680px;--wide:1240px}
+.intro,.nums,.toc,.live,.next,.end{max-width:calc(var(--col) + var(--pad) * 2);margin-left:auto;margin-right:auto}
+.intro h1{font-size:clamp(48px,6vw,96px)}
+.facts{grid-template-columns:1fr 1fr;gap:20px 24px}
+.nums{grid-template-columns:1fr 1fr;gap:28px 24px}
+.hero-media{max-width:calc(var(--wide) + var(--pad) * 2);margin:0 auto}
+.next strong{font-size:clamp(44px,6vw,96px)}
+.order{max-width:var(--col);margin-left:auto;margin-right:auto;grid-template-columns:1fr}
+
+.chapters{max-width:calc(var(--wide) + var(--pad) * 2);margin:0 auto}
+.ch{display:block;padding-top:clamp(72px,12vh,140px)}
+.ch__text{position:static;max-width:var(--col);margin:0 auto}
+.ch h2{max-width:none}
+.ch p,.ch ul.rows,.ch blockquote{max-width:none}
+.ch__media{max-width:var(--wide);margin:clamp(32px,6vh,64px) auto 0;padding-top:0;gap:clamp(20px,3vh,32px)}
+.ch__media figcaption{max-width:var(--col);margin-left:auto;margin-right:auto;text-align:center}
+.ch__media .duo figcaption,.ch__media .trio figcaption{text-align:left;margin-left:0}
+@media (max-width:560px){ .facts,.nums{grid-template-columns:1fr} }
