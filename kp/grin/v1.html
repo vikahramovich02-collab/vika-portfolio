@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grin Dental Lab — коммерческое предложение · Вика Ахрамович</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@300;400;500&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* КП для Grin Dental Lab: слайды 1600×900, на экране масштабируются по ширине, в PDF — по странице на слайд.
+   Стиль КП = предлагаемый стиль бренда: фарфоровый фон, антиква + гротеск, работы в аккуратных карточках. */
+:root{--bg:#F3F0EA;--ink:#1B1A18;--dim:#7A756C;--soft:#4A463F;--line:rgba(27,26,24,.14);--card:#E9E4DB;--accent:#8C7B63;--dark:#141312}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#d9d4cb}
+body{font-family:Inter,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+.deck{zoom:var(--z,1)}
+.s{position:relative;width:1600px;height:900px;background:var(--bg);overflow:hidden;margin:0 auto 24px;padding:72px 88px}
+.s.dark{background:var(--dark);color:#F3F0EA}
+.serif{font-family:"Inter Tight",sans-serif;font-weight:400}
+i{font-style:italic;color:var(--accent)}
+.dark i{color:#C9B89C}
+.k{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:flex;align-items:center;gap:12px}
+.k::before{content:"";width:28px;height:1px;background:currentColor}
+.dark .k{color:#9b958b}
+h1{font-family:"Inter Tight",sans-serif;font-weight:400;font-size:132px;line-height:.9;letter-spacing:-.01em}
+h2{font-family:"Inter Tight",sans-serif;font-weight:400;font-size:76px;line-height:.95;letter-spacing:-.005em;margin-top:24px}
+p{font-size:18px;line-height:1.6;color:var(--soft);font-weight:300}
+.dark p{color:#bdb7ad}
+.num{position:absolute;right:88px;bottom:56px;font-size:12px;letter-spacing:.18em;color:var(--dim)}
+.brand{position:absolute;left:88px;bottom:56px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+.card{background:var(--card);border-radius:16px;overflow:hidden}
+.shot{border-radius:12px;box-shadow:0 20px 50px rgba(27,26,24,.14);display:block;width:100%}
+img{display:block}
+.rows div{display:grid;grid-template-columns:260px 1fr;gap:24px;padding:16px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.5}
+.rows div:last-child{border-bottom:1px solid var(--line)}
+.rows b{font-weight:500}.rows span{color:var(--soft);font-weight:300}
+.pill{display:inline-flex;height:40px;align-items:center;padding:0 18px;border:1px solid var(--line);border-radius:999px;font-size:14px}
+
+/* v2: карточки, мини-макеты, носители */
+.grid5{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.del{background:#fff;border-radius:16px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;min-height:330px;box-shadow:0 1px 0 rgba(27,26,24,.04)}
+.del .n{font-family:"Inter Tight",sans-serif;font-size:72px;line-height:1;color:var(--accent)}
+.del b{display:block;font-size:24px;font-weight:500;margin-top:22px}
+.del span{display:block;font-size:16px;line-height:1.5;color:var(--soft);font-weight:300;margin-top:8px}
+.del.ph{padding:0;overflow:hidden}.del.ph img{width:100%;height:100%;object-fit:cover}
+.pages{display:grid;grid-template-columns:repeat(7,1fr);gap:14px;margin-top:40px}
+.pg{background:#fff;border-radius:12px;padding:14px;height:330px;display:flex;flex-direction:column;gap:8px;box-shadow:0 18px 40px rgba(27,26,24,.08)}
+.pg .bar{height:6px;border-radius:3px;background:#ECE7DE}
+.pg .im{border-radius:8px;background:#1b1a18 center/cover}
+.pg .t{font-family:"Inter Tight",sans-serif;font-size:22px;line-height:1;margin-top:4px}
+.pg .l{height:5px;border-radius:3px;background:#EEE9E1}
+.pgcap{font-size:14px;line-height:1.45;color:var(--soft);font-weight:300;margin-top:14px}
+.pgcap b{display:block;color:var(--ink);font-weight:500;font-size:17px;margin-bottom:4px}
+.price{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.pc{background:#fff;border-radius:16px;padding:34px;min-height:440px;display:flex;flex-direction:column}
+.pc .n{font-size:12px;letter-spacing:.18em;color:var(--dim)}
+.pc b{font-size:28px;font-weight:500;margin-top:18px;line-height:1.2}
+.pc span{font-size:16px;line-height:1.5;color:var(--soft);font-weight:300;margin-top:10px;flex:1}
+.pc .p{font-family:"Inter Tight",sans-serif;font-size:68px;line-height:1;margin-top:18px}
+.pc .d{font-size:13px;color:var(--dim);margin-top:6px}
+
+/* v3: без антиквы — гротеск, чёрное на белом */
+:root{--bg:#F6F6F4;--card:#ECECEA;--accent:#1B1A18;--dark:#0E0E0E}
+h1,h2,.serif{font-family:"Inter Tight",sans-serif;font-weight:600;letter-spacing:-.035em}
+h1{font-size:128px;line-height:.92}
+h2{font-size:64px;line-height:1}
+i{font-style:normal;color:var(--dim)}
+.dark i{color:#8d8d8a}
+.k{font-family:"IBM Plex Mono",monospace;letter-spacing:.06em}
+.del .n{font-family:"IBM Plex Mono",monospace;font-size:14px;color:var(--dim)}
+.pc .p{font-family:"Inter Tight";font-weight:600;letter-spacing:-.03em}
+.pg .t{font-family:"Inter Tight";font-weight:600;font-size:18px;letter-spacing:-.02em}
+.brand,.num{font-family:"IBM Plex Mono",monospace}
+@media print{ html,body{background:none} .deck{zoom:1} .s{margin:0;page-break-after:always;break-after:page} @page{size:1600px 900px;margin:0} }
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- 01 обложка -->
+<section class="s" style="background:#fff">
+  <div style="display:flex;justify-content:space-between" class="k"><span>Коммерческое предложение</span><span>Октябрь 2026</span></div>
+  <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:end;margin-top:40px">
+    <div>
+      <h1 style="font-size:150px;line-height:.86;font-weight:700;letter-spacing:-.05em">GRIN<br>DENTAL<br>LAB</h1>
+      <p style="margin-top:36px;max-width:560px;font-size:20px">Ребрендинг, новый сайт, коммерческое предложение и журнал услуг для работы с докторами</p>
+    </div>
+    <img src="img/p-veneers.webp" style="width:100%;height:600px;object-fit:cover;border-radius:6px">
+  </div>
+  <div class="brand" style="text-transform:none">Вика Ахрамович · продуктовый дизайнер</div><div class="num">01</div>
+</section>
+
+<!-- 02 как я поняла задачу -->
+<section class="s">
+  <div class="k">Как я поняла задачу</div>
+  <div style="display:grid;grid-template-columns:.9fr 1.4fr;gap:64px;margin-top:8px">
+    <div>
+      <h2>Доктор заходит и сразу видит <i>мастера</i> и его работы</h2>
+      <p style="margin-top:28px">Главный актив у вас уже есть. Василий одновременно CDT в США и врач-стоматолог с 17 годами опыта. Нужно, чтобы это читалось с первого экрана, а работы выглядели как хорошее портфолио.</p>
+    </div>
+    <div class="grid5">
+      <div class="del"><span class="n">01</span><div><b>Ребрендинг</b><span>Стиль, к которому не придётся возвращаться 2–3 года</span></div></div>
+      <div class="del"><span class="n">02</span><div><b>Сайт</b><span>Галерея работ по направлениям, мастер на виду</span></div></div>
+      <div class="del ph"><img src="img/p-implant.webp"></div>
+      <div class="del"><span class="n">03</span><div><b>Мобильная</b><span>Под все размеры новых iPhone</span></div></div>
+      <div class="del"><span class="n">04</span><div><b>Журнал</b><span>С ним отдел продаж приходит в клинику</span></div></div>
+      <div class="del"><span class="n">05</span><div><b>КП</b><span>Короткая презентация для докторов после звонка</span></div></div>
+    </div>
+  </div>
+  <div class="brand">Grin Dental Lab</div><div class="num">02</div>
+</section>
+
+<!-- 03 аудит -->
+<section class="s">
+  <div class="k">Что сейчас мешает</div>
+  <h2 style="max-width:1000px">Работы сильные, а сайт их <i>не продаёт</i></h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:44px">
+    <figure><img class="shot" src="img/a-hero.webp"><p style="font-size:15px;margin-top:14px"><b style="font-weight:500;color:var(--ink)">Шаблонный вид.</b> Тёмно-синий с бирюзой и тяжёлый шрифт читаются как обычная клиника, а не как бутиковая лаборатория.</p></figure>
+    <figure><img class="shot" src="img/a-empty.webp"><p style="font-size:15px;margin-top:14px"><b style="font-weight:500;color:var(--ink)">Пустые экраны.</b> Блоки не догружаются, и доктор листает белые экраны. Это первое, что съедает доверие.</p></figure>
+    <figure><img class="shot" src="img/a-cases.webp"><p style="font-size:15px;margin-top:14px"><b style="font-weight:500;color:var(--ink)">Кейсы без истории.</b> Заглушка «Case 1», нет материала, количества единиц, срока и «до / после».</p></figure>
+  </div>
+  <div class="brand">Grin Dental Lab</div><div class="num">03</div>
+</section>
+
+<!-- 04 аудит 2 -->
+<section class="s">
+  <div class="k">Что сейчас мешает</div>
+  <div style="display:grid;grid-template-columns:1.25fr 1fr;gap:72px;margin-top:8px;align-items:start">
+    <div>
+      <h2>Главный козырь спрятан в <i>стене текста</i></h2>
+      <p style="margin-top:28px;max-width:600px">То, что Василий и техник, и врач, понимает работу «с обеих сторон кресла» и учился у профессора Славичека, сейчас лежит одним длинным абзацем в середине страницы. Доктор до него не доскроллит.</p>
+      <div class="rows" style="margin-top:36px">
+        <div><b>Мобильная</b><span>Фото зубов идут подряд на весь экран, без подписи и контекста</span></div>
+        <div><b>Главное действие</b><span>«Send a scan» теряется среди пунктов меню</span></div>
+        <div><b>Доверие</b><span>Нет цифр, сроков, материалов и процесса работы с лабораторией на виду</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:start">
+      <img class="shot" src="img/a-text.webp">
+      <div style="display:grid;gap:16px"><img class="shot" src="img/a-mob1.webp" style="border-radius:18px"><img class="shot" src="img/a-mob2.webp" style="border-radius:18px"></div>
+    </div>
+  </div>
+  <div class="brand">Grin Dental Lab</div><div class="num">04</div>
+</section>
+
+<!-- 06B направление -->
+<section class="s" style="background:#ffffff;padding:56px 88px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+    <div><div class="k">Направление A</div><h2 style="font-size:64px">Смелый <i>гротеск</i></h2></div>
+    <p style="max-width:520px;font-size:16px">Как модная студия: огромный жирный гротеск капсом, одна работа по центру, мелкие колонки текста по бокам. Дерзко и запоминается, Grin будут выделяться среди других лабораторий.</p>
+  </div>
+  <div style="display:flex;gap:28px;align-items:flex-end;margin-top:32px">
+    <img class="shot" src="img/st-b_home.webp" style="width:1100px"><img class="shot" src="img/st-b_cover.webp" style="width:300px">
+  </div>
+  <div class="num">05</div>
+</section>
+
+<!-- 06C направление -->
+<section class="s" style="background:#EEF2F6;padding:56px 88px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+    <div><div class="k">Направление B</div><h2 style="font-size:64px">Мягкие <i>карточки</i></h2></div>
+    <p style="max-width:520px;font-size:16px">Светлый голубой, большие скругления, услуги карточками с фото, которые листаются. Спокойно, современно и понятно с первого взгляда, хорошо работает на телефоне.</p>
+  </div>
+  <div style="display:flex;gap:28px;align-items:flex-end;margin-top:32px">
+    <img class="shot" src="img/st-d_home.webp" style="width:1100px"><img class="shot" src="img/st-d_cover.webp" style="width:300px">
+  </div>
+  <div class="num">06</div>
+</section>
+
+<!-- 06D направление -->
+<section class="s" style="background:#e7e7e7;padding:56px 88px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+    <div><div class="k">Направление C</div><h2 style="font-size:64px">Лабораторная <i>наука</i></h2></div>
+    <p style="max-width:520px;font-size:16px">Чёрное и белое, одна синяя точка как знак бренда, моно-подписи как в лаборатории. Работы как научные образцы: точность и технологичность. Отлично ложится в соцсети и журнал.</p>
+  </div>
+  <div style="display:flex;gap:28px;align-items:flex-end;margin-top:32px">
+    <img class="shot" src="img/st-e_home.webp" style="width:1120px;margin:0 auto">
+  </div>
+  <div class="num">07</div>
+</section>
+
+<!-- 06E направление -->
+<section class="s dark" style="background:#141312;padding:56px 88px">
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:40px">
+    <div><div class="k">Направление D</div><h2 style="font-size:64px">Цифровая <i>точность</i></h2></div>
+    <p style="max-width:520px;font-size:16px">Тёмная тема, работа на весь экран, плашки со сроками и материалами. Акцент на digital workflow и CAD/CAM, ощущение дорогой техники.</p>
+  </div>
+  <div style="display:flex;gap:28px;align-items:flex-end;margin-top:32px">
+    <img class="shot" src="img/st-c_home.webp" style="width:1100px"><img class="shot" src="img/st-c_cover.webp" style="width:300px">
+  </div>
+  <div class="num">08</div>
+</section>
+
+<!-- 07 структура сайта -->
+<section class="s">
+  <div class="k">Структура нового сайта</div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:64px">
+    <h2 style="max-width:760px">Каждая страница отвечает на <i>вопрос доктора</i></h2>
+    <p style="max-width:420px;font-size:16px">Сайт на английском, под американских докторов. Помогу с текстами на основе ваших материалов.</p>
+  </div>
+  <div class="pages"><div class="pg"><div class="bar"></div><div class="t">Home</div><div class="im" style="height:170px;background-image:url(img/p-veneers.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div></div><div class="pg"><div class="bar"></div><div class="t">Cases</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px"><div class="im" style="height:80px;background-image:url(img/p-veneers.webp)"></div><div class="im" style="height:80px;background-image:url(img/p-arch.webp)"></div><div class="im" style="height:80px;background-image:url(img/p-implant.webp)"></div><div class="im" style="height:80px;background-image:url(img/p-crowns.webp)"></div></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div></div><div class="pg"><div class="bar"></div><div class="t">Products</div><div class="im" style="height:170px;background-image:url(img/p-crowns.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div></div><div class="pg"><div class="bar"></div><div class="t">Vasyl</div><div class="im" style="height:170px;background-image:url(img/p-macro.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div><div class="l" style="width:60%"></div></div><div class="pg"><div class="bar"></div><div class="t">Send a scan</div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div><div class="l" style="width:60%"></div></div><div class="pg"><div class="bar"></div><div class="t">Journal</div><div class="im" style="height:170px;background-image:url(img/p-arch.webp)"></div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div></div><div class="pg"><div class="bar"></div><div class="t">Contact</div><div class="l" style="width:92%"></div><div class="l" style="width:78%"></div><div class="l" style="width:85%"></div><div class="l" style="width:60%"></div></div></div>
+  <div class="pages" style="margin-top:0"><div class="pgcap"><b>Главная</b>Кто вы и почему вам можно доверить пациента</div><div class="pgcap"><b>Cases</b>Галерея с фильтром: veneers, crowns, all-on-X</div><div class="pgcap"><b>Products</b>Пакеты: что входит, материалы, сроки</div><div class="pgcap"><b>About Vasyl</b>CDT + DDS, 17 лет, обучение у Славичека</div><div class="pgcap"><b>Work with us</b>Скан, RX-форма, цвет, доставка</div><div class="pgcap"><b>Journal</b>Статьи для докторов, база уже есть</div><div class="pgcap"><b>Contact</b>Короткая форма и адрес на Sutter St.</div></div>
+  <div class="num">09</div>
+</section>
+
+<!-- 08 ребрендинг -->
+<section class="s">
+  <div class="k">Ребрендинг</div>
+  <div style="display:grid;grid-template-columns:.85fr 1.5fr;gap:56px;margin-top:8px">
+    <div>
+      <h2>Один стиль на сайте, в журнале и в <i>коробке с работой</i></h2>
+      <p style="margin-top:28px">Доктор держит в руках коробку с коронкой, RX-форму и визитку. Всё это должно выглядеть так же дорого, как ваша керамика.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px"><span class="pill">Логотип и знак</span><span class="pill">Палитра и шрифты</span><span class="pill">Фото-стиль</span><span class="pill">Носители</span><span class="pill">Мини-гайд PDF</span></div>
+    </div>
+    <div style="position:relative;height:690px;background:#E4DED3;border-radius:20px;overflow:hidden">
+      <!-- логотип -->
+      <div style="position:absolute;left:44px;top:44px;width:380px;height:250px;background:#1B1A18;border-radius:14px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#F3F0EA;box-shadow:0 30px 60px rgba(0,0,0,.25)">
+        <div style="width:54px;height:54px;border:1px solid #C9B89C;border-radius:50%;display:grid;place-items:center;font-family:'Inter Tight';font-size:30px;font-style:italic;color:#C9B89C">g</div>
+        <div class="serif" style="font-size:64px;letter-spacing:.14em;margin-top:14px">GRIN</div>
+        <div style="font-size:10px;letter-spacing:.32em;color:#9b958b;margin-top:4px">DENTAL LAB · SAN FRANCISCO</div>
+      </div>
+      <!-- визитка -->
+      <div style="position:absolute;left:470px;top:70px;width:340px;height:200px;background:#F7F4EE;border-radius:8px;padding:26px;transform:rotate(4deg);box-shadow:0 24px 50px rgba(27,26,24,.2)">
+        <div class="serif" style="font-size:22px;letter-spacing:.14em">GRIN</div>
+        <div style="position:absolute;left:26px;bottom:24px"><div class="serif" style="font-size:24px">Vasyl Hryn, <i>CDT</i></div><div style="font-size:11px;color:var(--dim);margin-top:6px">Founder · +1 (415) 425-9175</div></div>
+      </div>
+      <!-- RX форма -->
+      <div style="position:absolute;left:60px;top:330px;width:330px;height:420px;background:#fff;border-radius:6px;padding:28px;transform:rotate(-3deg);box-shadow:0 24px 50px rgba(27,26,24,.16)">
+        <div style="display:flex;justify-content:space-between;align-items:baseline"><span class="serif" style="font-size:20px;letter-spacing:.14em">GRIN</span><span style="font-size:10px;letter-spacing:.2em;color:var(--dim)">RX FORM</span></div>
+        <div class="serif" style="font-size:34px;margin-top:26px">Lab <i>prescription</i></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Doctor</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Patient</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Restoration</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Material</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Shade</span><span>__________</span></div><div style="display:flex;justify-content:space-between;border-bottom:1px solid #E6E1D8;padding:10px 0;font-size:11px;color:var(--dim)"><span>Due date</span><span>__________</span></div>
+      </div>
+      <!-- коробка -->
+      <div style="position:absolute;right:46px;bottom:40px;width:400px;height:290px;background:#1B1A18;border-radius:10px;box-shadow:0 34px 60px rgba(0,0,0,.3);overflow:hidden">
+        <img src="img/p-crowns.webp" style="width:100%;height:62%;object-fit:cover;opacity:.9">
+        <div style="padding:18px 22px;color:#F3F0EA;display:flex;justify-content:space-between;align-items:center"><span class="serif" style="font-size:28px;letter-spacing:.14em">GRIN</span><span style="font-size:10px;letter-spacing:.24em;color:#C9B89C">HANDCRAFTED IN SF</span></div>
+      </div>
+      <!-- палитра -->
+      <div style="position:absolute;left:480px;top:300px;display:flex;gap:8px">
+        <span style="width:44px;height:44px;border-radius:50%;background:#F3F0EA;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#E9E4DB;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#C9B89C;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#8C7B63;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span><span style="width:44px;height:44px;border-radius:50%;background:#1B1A18;box-shadow:0 6px 14px rgba(0,0,0,.08)"></span>
+      </div>
+    </div>
+  </div>
+  <div class="brand">Grin Dental Lab</div><div class="num">10</div>
+</section>
+
+<!-- 09 журнал -->
+<section class="s" style="background:#d9d4cb">
+  <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:56px;height:100%">
+    <div>
+      <div class="k">Журнал услуг · The Lab Book</div>
+      <h2>Журнал, с которым отдел продаж приходит <i>в клинику</i></h2>
+      <div class="rows" style="margin-top:32px">
+        <div style="grid-template-columns:150px 1fr"><b>Объём</b><span>24–32 страницы</span></div>
+        <div style="grid-template-columns:150px 1fr"><b>Главы</b><span>История лаборатории, мастер, философия, услуги, кейсы, как работать с нами</span></div>
+        <div style="grid-template-columns:150px 1fr"><b>Форматы</b><span>Файлы для печати и лёгкий PDF для рассылки</span></div>
+      </div>
+      <p style="margin-top:24px;font-size:15px">Обложки показаны в направлениях A и D. Журналы о людях я делаю в своём проекте ALBUMCHIK, так что это моя любимая часть.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding:0 40px">
+      <img class="shot" src="img/st-b_cover.webp">
+      <img class="shot" src="img/st-c_cover.webp">
+    </div>
+  </div>
+  <div class="num">11</div>
+</section>
+
+<!-- 10 КП -->
+<section class="s">
+  <div class="k">Коммерческое предложение для докторов</div>
+  <div style="display:grid;grid-template-columns:.85fr 1.5fr;gap:56px;margin-top:8px">
+    <div>
+      <h2>8–12 слайдов, которые доктор <i>дочитает</i></h2>
+      <p style="margin-top:28px">Короткая версия журнала для отправки после звонка. Шаблон, в котором отдел продаж сам меняет название клиники и нужные услуги.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:28px"><span class="pill">PDF</span><span class="pill">Keynote / PowerPoint</span><span class="pill">Figma</span></div>
+    </div>
+    <div style="position:relative;height:690px;background:#E4DED3;border-radius:20px;overflow:hidden">
+      <div style="position:absolute;left:60px;top:70px;width:560px;height:315px;background:#141312;border-radius:10px;overflow:hidden;transform:rotate(-4deg);box-shadow:0 30px 60px rgba(0,0,0,.25)"><img src="img/p-crowns.webp" style="width:100%;height:100%;object-fit:cover;opacity:.8"><div class="serif" style="position:absolute;left:28px;bottom:24px;color:#F3F0EA;font-size:48px;line-height:.9">Grin <i style="color:#C9B89C">Dental</i><br>Lab</div></div>
+      <div style="position:absolute;right:50px;top:200px;width:560px;height:315px;background:#F7F4EE;border-radius:10px;overflow:hidden;transform:rotate(3deg);box-shadow:0 30px 60px rgba(0,0,0,.2);display:grid;grid-template-columns:1fr 1fr"><div style="padding:28px"><div style="font-size:9px;letter-spacing:.2em;color:var(--dim)">PRODUCTS · 04</div><div class="serif" style="font-size:40px;line-height:.95;margin-top:16px">The <i>veneer</i><br>package</div><div style="margin-top:18px"><div style="border-top:1px solid #E6E1D8;padding:7px 0;font-size:10px;color:var(--dim)">e.max, Noritake EX-3, MIYO</div><div style="border-top:1px solid #E6E1D8;padding:7px 0;font-size:10px;color:var(--dim)">DSD, mock-up, final</div><div style="border-top:1px solid #E6E1D8;padding:7px 0;font-size:10px;color:var(--dim)">5–7 business days</div></div></div><img src="img/p-macro.webp" style="width:100%;height:100%;object-fit:cover"></div>
+      <div style="position:absolute;left:120px;bottom:40px;width:480px;height:270px;background:#F7F4EE;border-radius:10px;overflow:hidden;transform:rotate(-1.5deg);box-shadow:0 30px 60px rgba(0,0,0,.18);padding:26px"><div style="font-size:9px;letter-spacing:.2em;color:var(--dim)">CASES · 07</div><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px"><img src="img/p-veneers.webp" style="width:100%;height:150px;object-fit:cover;border-radius:6px"><img src="img/p-arch.webp" style="width:100%;height:150px;object-fit:cover;border-radius:6px"><img src="img/p-implant.webp" style="width:100%;height:150px;object-fit:cover;border-radius:6px"></div></div>
+    </div>
+  </div>
+  <div class="brand">Grin Dental Lab</div><div class="num">12</div>
+</section>
+
+<!-- 11 почему я -->
+<section class="s dark">
+  <div class="k">Почему я</div>
+  <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:64px;margin-top:8px">
+    <div>
+      <h2>Продуктовый дизайнер, который работает <i>вместе с ИИ</i></h2>
+      <p style="margin-top:28px;max-width:540px">Я веду проект целиком: стиль, сайт, печать и презентации в одной системе. ИИ меня не заменяет, он дополняет: Claude Code, Codex и Higgsfield берут рутину, поэтому работа идёт быстрее, а решения и вкус остаются за мной.</p>
+      <div class="rows" style="margin-top:32px;--line:rgba(243,240,234,.16)">
+        <div style="grid-template-columns:200px 1fr"><b>Быстрее обычного</b><span style="color:#bdb7ad">Концепт главной за день, весь пакет примерно за 5 недель</span></div>
+        <div style="grid-template-columns:200px 1fr"><b>Живой прототип</b><span style="color:#bdb7ad">Отдаю не картинки, а готовый фронт. Вашей вёрстке останется подключить данные</span></div>
+        <div style="grid-template-columns:200px 1fr"><b>Похожий опыт</b><span style="color:#bdb7ad">Сайты, питч-деки, брошюры и журналы для стартапа и сервисов</span></div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start">
+      <figure><img src="img/pf-mary.webp" style="width:100%;border-radius:12px"><p style="font-size:13px;margin-top:8px">Mary AI: сайт, платформа, питч-дек, брошюры</p></figure>
+      <figure><img src="img/pf-it.webp" style="width:100%;border-radius:12px"><p style="font-size:13px;margin-top:8px">InTreatment: многостраничный сайт и онбординг</p></figure>
+      <figure><img src="img/pf-al2.webp" style="width:100%;border-radius:12px"><p style="font-size:13px;margin-top:8px">ALBUMCHIK: вёрстка журналов</p></figure>
+      <figure><img src="img/pf-brochure.webp" style="width:100%;border-radius:12px"><p style="font-size:13px;margin-top:8px">Брошюра для конференций</p></figure>
+    </div>
+  </div>
+  <div class="num">13</div>
+</section>
+
+<!-- 12 этапы и стоимость -->
+<section class="s">
+  <div class="k">Этапы, сроки и стоимость</div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px">
+    <h2>Около <i>5 недель</i> на весь пакет</h2>
+    <div style="background:var(--dark);color:#F3F0EA;border-radius:16px;padding:22px 30px;display:flex;align-items:center;gap:28px">
+      <div><div style="font-size:11px;letter-spacing:.2em;color:#9b958b">ПАКЕТ ЦЕЛИКОМ</div><div style="font-size:13px;color:#9b958b;margin-top:6px;text-decoration:line-through">$4 550 по отдельности</div></div>
+      <div class="serif" style="font-size:64px;line-height:1">$3 900</div>
+    </div>
+  </div>
+  <div class="price">
+    <div class="pc"><span class="n">01 · 1–1,5 НЕДЕЛИ</span><b>Ребрендинг</b><span>Логотип, палитра, шрифты, фото-стиль, носители, мини-гайд. Бриф и мудборд входят</span><div class="p">$1 200</div></div>
+    <div class="pc"><span class="n">02 · 2 НЕДЕЛИ</span><b>Дизайн сайта</b><span>До 8 страниц, десктоп и мобильная под все iPhone, тексты вместе с вами</span><div class="p">$1 800</div></div>
+    <div class="pc"><span class="n">03 · 1,5 НЕДЕЛИ</span><b>Журнал услуг</b><span>24–32 страницы, файлы для печати и лёгкий PDF для рассылки</span><div class="p">$1 100</div></div>
+    <div class="pc"><span class="n">04 · 3–4 ДНЯ</span><b>КП для докторов</b><span>8–12 слайдов, редактируемый шаблон для отдела продаж</span><div class="p">$450</div></div>
+  </div>
+  <p style="margin-top:22px;font-size:14px">Оплата по этапам: 50% на старте, 50% по готовности. Опционально: вёрстка сайта от $1 500, 1–2 недели.</p>
+  <div class="brand">Grin Dental Lab</div><div class="num">14</div>
+</section>
+
+<!-- 13 следующий шаг -->
+<section class="s dark" style="padding:0">
+  <img src="img/p-veneers.webp" style="position:absolute;right:0;top:0;width:52%;height:100%;object-fit:cover;opacity:.9">
+  <div style="position:relative;padding:72px 88px;height:100%;display:flex;flex-direction:column;justify-content:space-between;max-width:800px">
+    <div class="k">Следующий шаг</div>
+    <div>
+      <h2 style="font-size:96px">Давайте <i>созвонимся</i> на 30 минут</h2>
+      <p style="margin-top:28px;max-width:560px">Обсудим примеры, которые вам нравятся, и соберём бриф. После этого за пару дней покажу мудборд и направление стиля.</p>
+      <p style="margin-top:20px;max-width:560px;font-size:15px">Что пригодится: исходники фото работ, примеры сайтов, которые нравятся, доступ к текущему сайту.</p>
+    </div>
+    <div style="display:flex;gap:40px;font-size:15px;color:#F3F0EA"><span>Telegram @viksaaaaaa_a</span><span>Портфолио: vikahramovich02-collab.github.io/vika-portfolio</span></div>
+  </div>
+</section>
+
+</div>
+<script>
+  // на экране слайды подгоняем под ширину окна
+  const fit = () => document.querySelector('.deck').style.setProperty('--z', Math.min(1, (innerWidth - 32) / 1600));
+  fit(); addEventListener('resize', fit);
+</script>
+</body>
+</html>
