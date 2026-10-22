@@ -35,6 +35,8 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
 .cap{font-size:14px;color:var(--dim);margin-top:10px;line-height:1.4}
 .cap b{color:var(--fg);font-weight:400}
 .ph{width:100%;object-fit:cover;background:var(--panel)}
+.print-only{display:none}
+@media print{ .print-only{display:block} .live iframe{display:none} }
 @media print{ html,body{background:none} .deck{zoom:1} .s{margin:0;break-after:page} @page{size:1600px 900px;margin:0} }
 </style>
 </head>
@@ -148,6 +150,26 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
       <ul class="rows" style="margin-top:auto"><li style="grid-template-columns:1fr;padding:14px 0"><span style="color:var(--fg)">Ощущение дорогой техники</span></li><li style="grid-template-columns:1fr;padding:14px 0"><span style="color:var(--fg)">Цифры и сроки на виду</span></li><li style="grid-template-columns:1fr;padding:14px 0"><span style="color:var(--fg)">Работы крупно на тёмном</span></li></ul>
     </div>
     <img src="img/st-c_home.webp" style="width:1088px;height:680px;object-fit:contain;background:#000">
+  </div>
+</section>
+
+<!-- 5S концепт сайта -->
+<section class="s">
+  <div class="top"><span>05.</span><span>Концепт главной</span><span class="dim">живой прототип · смотрите в движении</span><a href="https://vikahramovich02-collab.github.io/vika-portfolio/kp/grin/site/" style="color:inherit;text-decoration:none">открыть сайт ↗</a></div>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1088px;gap:48px;padding-top:40px;align-items:start">
+    <div style="display:flex;flex-direction:column;height:680px">
+      <h2 style="font-size:64px">Улыбка с первого экрана</h2>
+      <p style="margin-top:24px;font-size:18px">Доктор покупает результат: пациента, который улыбается. Поэтому сайт начинается с эмоции, а дальше идут мастер, работы и как отправить скан.</p>
+      <ul class="rows" style="margin-top:auto">
+        <li style="grid-template-columns:1fr;padding:14px 0"><span style="color:var(--fg)">Ролик на весь экран</span></li>
+        <li style="grid-template-columns:1fr;padding:14px 0"><span style="color:var(--fg)">Готовый фронт, не картинка</span></li>
+        <li style="grid-template-columns:1fr;padding:14px 0"><span style="color:var(--fg)">Под все размеры iPhone</span></li>
+      </ul>
+    </div>
+    <div class="live" style="width:1088px;height:680px;border-radius:8px;overflow:hidden;position:relative;background:#f2f3f5">
+      <iframe src="site/index.html" title="Концепт сайта Grin" scrolling="no" style="width:1440px;height:900px;border:0;transform:scale(.7556);transform-origin:0 0;pointer-events:none"></iframe>
+      <img class="print-only" src="img/site-hero.webp" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
+    </div>
   </div>
 </section>
 
