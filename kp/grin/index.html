@@ -36,6 +36,37 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
 .cap b{color:var(--fg);font-weight:400}
 .ph{width:100%;object-fit:cover;background:var(--panel)}
 .print-only{display:none}
+
+/* мобильная версия: слайды становятся обычными блоками, всё в одну колонку */
+@media (max-width:760px){
+  html,body{background:var(--bg)}
+  .deck{zoom:1!important}
+  .s{width:auto;height:auto;margin:0;padding:20px 16px 48px;border-bottom:1px solid var(--line)}
+  .s > div,.s > ul{flex:none!important}
+  .s [style*="grid-template-columns"]{grid-template-columns:1fr!important;gap:20px!important}
+  .s [style*="grid-row"]{grid-row:auto!important}
+  .s [style*="grid-column"]{grid-column:auto!important}
+  .s [style*="height:6"],.s [style*="height:7"],.s [style*="height:5"]{height:auto!important}
+  .s img,.s video{width:100%!important;height:auto!important;max-height:none!important}
+  .s .ph{aspect-ratio:16/10;object-fit:cover;height:auto!important}
+  .s [style*="padding-top"]{padding-top:20px!important}
+  .s [style*="margin-top:auto"]{margin-top:24px!important}
+  .s [style*="width:1088px"]{width:100%!important;height:auto!important}
+  .live{aspect-ratio:16/10;height:auto!important}
+  .live iframe{display:none}
+  .live .print-only{display:block}
+  .top{grid-template-columns:auto 1fr auto;font-size:12px;gap:12px}
+  .top > :nth-child(3){display:none}
+  h1,.s h1[style]{font-size:64px!important;line-height:.9}
+  h2,.s h2[style]{font-size:34px!important;line-height:1}
+  p,.s p[style]{font-size:16px!important}
+  .rows li,.rows li[style]{grid-template-columns:40px 1fr!important;gap:6px 12px!important;font-size:16px!important;padding:14px 0!important}
+  .rows li > :nth-child(3),.rows li > :nth-child(4){grid-column:2}
+  .s [style*="font-size:140px"]{font-size:72px!important}
+  .s img[src*="vika.webp"]{width:96px!important;height:96px!important}
+  .s h1[style*="150px"]{font-size:48px!important}
+  .s a[style*="border-radius:999px"]{align-self:stretch!important;justify-content:center;margin-top:28px!important}
+}
 @media print{ .print-only{display:block} .live iframe{display:none} }
 @media print{ html,body{background:none} .deck{zoom:1} .s{margin:0;break-after:page} @page{size:1600px 900px;margin:0} }
 </style>
@@ -56,9 +87,9 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
 <section class="s">
   <div class="top"><span>01.</span><span>Задача</span><span class="dim">как я поняла</span><span>Grin Dental Lab</span></div>
   <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:64px;padding-top:56px">
-    <h2>Современный дизайн, который узнают и в который вовлекаются</h2>
+    <h2>Современный дизайн, который узнают</h2>
     <div>
-      <p>Я зашла на ваш сайт глазами доктора. Сначала видишь шаблонный синий сайт, похожий на клинику. Работы идут фото подряд, без материала и сроков. А главное — что Василий и техник CDT, и врач с 17 годами опыта — я нашла только в длинном абзаце внизу страницы.</p><p style="margin-top:14px">Задача: разработать современный дизайн, который делает Grin узнаваемым и вовлекает докторов: мастер и работы видны сразу.</p>
+      <p>Задача: разработать современный дизайн, который делает Grin узнаваемым и вовлекает докторов: мастер и работы видны сразу.</p>
       <ul class="rows" style="margin-top:40px">
         <li><span class="n">01</span><b>Стиль</b><span>современный, на 2–3 года вперёд</span></li>
         <li><span class="n">02</span><b>Работы</b><span>аккуратная галерея с подписями</span></li>
@@ -256,7 +287,7 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
 
 </div>
 <script>
-  const fit = () => document.querySelector('.deck').style.setProperty('--z', Math.min(1, (innerWidth - 32) / 1600));
+  const fit = () => document.querySelector('.deck').style.setProperty('--z', innerWidth <= 760 ? 1 : Math.min(1, (innerWidth - 32) / 1600));
   fit(); addEventListener('resize', fit);
 </script>
 </body>
