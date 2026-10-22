@@ -143,3 +143,6 @@
 .nums.done b{font-size:clamp(26px,2.4vw,36px);letter-spacing:-.03em}
 .nums.done span{margin-top:8px}
 @media (max-width:560px){.nums.done{grid-template-columns:1fr}}
+/* роль · период в одну строку */
+.factline{display:flex;flex-wrap:wrap;gap:8px 28px;margin:clamp(28px,4vh,40px) 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:15px}
+.factline span+span{color:var(--dim)}
