@@ -62,8 +62,9 @@ p{font-size:20px;line-height:1.5;color:#c9ccd0;font-weight:300}
   .rows li > :nth-child(3),.rows li > :nth-child(4){grid-column:2}
   .rows li[style*="120px 1fr"],.rows li[style*="96px 1fr"]{grid-template-columns:104px 1fr!important}
   .s [style*="font-size:140px"]{font-size:72px!important}
-  .openlink{position:static!important;margin-top:16px}
-  .live:has(.openlink){display:flex;flex-direction:column;aspect-ratio:auto!important}
+  .openlink{position:static!important;margin-top:16px;width:auto!important}
+  .live:has(.openlink){display:flex;flex-direction:column;align-items:flex-start;aspect-ratio:auto!important;background:none!important}
+  .live:has(.openlink) .print-only{display:none!important}
   .live:has(.openlink) video{aspect-ratio:16/10}
   .s img[src*="vika.webp"]{width:96px!important;height:96px!important}
   .s h1[style*="150px"]{font-size:48px!important;margin-top:48px}
