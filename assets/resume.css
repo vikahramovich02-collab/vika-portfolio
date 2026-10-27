@@ -109,3 +109,8 @@
 .end{padding:0 var(--pad) var(--pad)}
 .proj-list a{grid-template-columns:160px 1fr;gap:24px}
 @media print{ .proj-list a{grid-template-columns:110px 1fr;gap:14px} }
+/* телефон только в PDF, на открытой странице его нет */
+.print-only{display:none}
+@media print{ .print-only{display:block} .cv__facts{grid-template-columns:repeat(3,1fr)} }
+.cv__facts{grid-template-columns:repeat(3,1fr)}
+@media (max-width:760px){ .cv__facts{grid-template-columns:1fr 1fr} }
