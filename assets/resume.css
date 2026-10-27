@@ -114,3 +114,5 @@
 @media print{ .print-only{display:block} .cv__facts{grid-template-columns:repeat(3,1fr)} }
 .cv__facts{grid-template-columns:repeat(3,1fr)}
 @media (max-width:760px){ .cv__facts{grid-template-columns:1fr 1fr} }
+.job__when small{display:block;margin-top:4px;font-size:13px;color:var(--faint)}
+@media print{ .job__when small{font-size:10px;color:#777;margin-top:2px} }
