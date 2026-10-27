@@ -14,8 +14,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="assets/base.css?v=7">
-<link rel="stylesheet" href="assets/home.css?v=7">
+<link rel="stylesheet" href="assets/base.css?v=8">
+<link rel="stylesheet" href="assets/home.css?v=8">
 </head>
 <body>
   <div class="meta">
@@ -63,15 +63,31 @@
       <div class="case__tags reveal"><span>Исследование</span><span>Путь клиента</span><span>Сайт</span><span>Онбординг</span><span>Платформа</span><span>Мобильная версия</span><span>Дизайн-система</span></div>
     </article>
 
-    <article class="case" id="albumchik">
-      <div class="case__head reveal"><span>03.</span><span class="hide-m">Мой проект · журналы и фотоальбомы</span><span class="dim hide-m">2026</span><a href="https://albumchik.by" target="_blank" rel="noopener">albumchik.by ↗︎</a></div>
-      <div class="case__title reveal"><h2>ALBUMCHIK</h2><p>Мой личный проект: делаю журналы о человеке и фотоальбомы. Вёрстка, типографика, печать и сайт.</p></div>
-      <a class="cover" href="albumchik.html" data-cursor="Смотреть кейс" aria-label="Кейс ALBUMCHIK">
-        <img src="img/al/cover.webp" alt="Журналы ALBUMCHIK" loading="lazy">
-      </a>
-      <div class="case__tags reveal"><span>Вёрстка журналов</span><span>Типографика</span><span>Арт-дирекшн</span><span>Брендинг</span><span>Сайт</span></div>
-    </article>
   </main>
+
+  <section class="all" id="all">
+    <div class="all__head">
+      <h2 class="reveal">Все работы</h2>
+      <div class="flt" role="tablist" aria-label="Фильтр работ">
+        <button class="is-on" data-f="all">Все</button>
+        <button data-f="platform">Платформы и сервисы</button>
+        <button data-f="site">Сайты</button>
+        <button data-f="deck">Презентации</button>
+        <button data-f="print">Печать и айдентика</button>
+      </div>
+    </div>
+    <div class="wks">
+      <a class="wk reveal" data-kind="platform" href="mary-platform.html" data-cursor="Смотреть"><span class="wk__img"><img src="img/mary/v-platform.webp" alt="Mary AI" loading="lazy"><video data-hover data-src="img/mary/v-platform.mp4" muted loop playsinline preload="none"></video></span><b>Mary AI</b><small>Платформа: чат, автоматизации, дизайн-система</small></a>
+      <a class="wk reveal" data-kind="site" href="mary-site.html" data-cursor="Смотреть"><span class="wk__img"><img src="img/mary/home_0.webp" alt="maryrose.by" loading="lazy"><video data-hover data-src="img/mary/v-site.mp4" muted loop playsinline preload="none"></video></span><b>maryrose.by</b><small>Основной сайт Mary AI</small></a>
+      <a class="wk reveal" data-kind="site" href="mary-dev.html" data-cursor="Смотреть"><span class="wk__img"><img src="img/mary/dev_0.webp" alt="sales.maryrose.by" loading="lazy"><video data-hover data-src="img/mary/v-dev.mp4" muted loop playsinline preload="none"></video></span><b>sales.maryrose.by</b><small>Сайт заказной разработки</small></a>
+      <a class="wk reveal" data-kind="deck" href="mary-deck.html" data-cursor="Смотреть"><span class="wk__img"><img src="img/mary/deck-s01.webp" alt="Питч-дек на $3M" loading="lazy"><video data-hover data-src="img/mary/v-deck.mp4" muted loop playsinline preload="none"></video></span><b>Питч-дек на $3M</b><small>Mary AI · презентация для инвесторов</small></a>
+      <a class="wk reveal" data-kind="platform" href="intreatment.html#chat" data-cursor="Смотреть"><span class="wk__img"><img src="img/it/chat.webp" alt="InTreatment" loading="lazy"></span><b>InTreatment</b><small>Чат-подбор психолога и личные кабинеты</small></a>
+      <a class="wk reveal" data-kind="site" href="intreatment.html#site" data-cursor="Смотреть"><span class="wk__img"><img src="img/it/home_0.webp" alt="intreatment.online" loading="lazy"></span><b>intreatment.online</b><small>Многостраничный сайт платформы</small></a>
+      <a class="wk reveal" data-kind="site" href="albumchik.html#site" data-cursor="Смотреть"><span class="wk__img"><img src="img/al/home_0.webp" alt="albumchik.by" loading="lazy"></span><b>albumchik.by</b><small>Сайт моего проекта журналов</small></a>
+      <a class="wk reveal" data-kind="print" href="albumchik.html#magazines" data-cursor="Смотреть"><span class="wk__img"><img src="img/al/cover.webp" alt="ALBUMCHIK" loading="lazy"></span><b>ALBUMCHIK</b><small>Журналы о человеке и фотоальбомы</small></a>
+      <a class="wk reveal" data-kind="print" href="mary.html#brand" data-cursor="Смотреть"><span class="wk__img"><img src="img/mary/badges-lanyard.webp" alt="Mary · печать" loading="lazy"></span><b>Mary · печать</b><small>Бейджи, брошюра-гармошка, визитки</small></a>
+    </div>
+  </section>
 
   <section class="ai" id="ai">
     <div class="ai__head">
@@ -94,9 +110,9 @@
       <p class="reveal">Веду продукт <b>от задачи и пути клиента до готового фронта</b>, который забирает разработка, и везде использую ИИ, чтобы это шло быстрее. А всё, что продукт показывает людям снаружи (сайт, презентация, ролик, печать), делаю в той же системе, поэтому всё выглядит как одно целое.</p>
     </div>
     <ul class="srv">
-      <li class="reveal"><span class="n">01</span><h3>Продукт и интерфейсы<small>веб-сервисы, платформы, мобильные</small></h3><p>Разбираю задачу и путь клиента, рисую флоу и нахожу, где люди теряются. Проектирую интерфейсы, собираю дизайн-систему и рабочий прототип, который по сути готовый фронт. На нём же быстро собираются варианты для A/B-тестов.</p><span class="see"><a href="mary.html#platform">Mary · платформа →</a><a href="intreatment.html#chat">InTreatment · чат-подбор →</a><a href="intreatment.html#cabinet">InTreatment · кабинеты →</a></span></li>
-      <li class="reveal"><span class="n">02</span><h3>Сайты<small>лендинги и многостраничные</small></h3><p>Структура, тексты вместе с заказчиком, дизайн, анимации и мобильная версия. SEO и аналитику закладываю сразу. Могу сама сверстать и выложить.</p><span class="see"><a href="mary.html#site">maryrose.by →</a><a href="mary.html#dev">sales.maryrose.by →</a><a href="intreatment.html#site">intreatment.online →</a><a href="albumchik.html#site">albumchik.by →</a></span></li>
-      <li class="reveal"><span class="n">03</span><h3>Презентации<small>питч-деки, продающие, отдельные слайды</small></h3><p>Собираю историю и цифры в презентацию для инвесторов или клиентов. Делаю PDF, PPTX и веб-версию, могу оживить слайды моушеном.</p><span class="see"><a href="mary.html#deck">Mary · питч-дек на $3M →</a></span></li>
+      <li class="reveal"><span class="n">01</span><h3>Продукт и интерфейсы<small>веб-сервисы, платформы, мобильные</small></h3><p>Разбираю задачу и путь клиента, рисую флоу и нахожу, где люди теряются. Проектирую интерфейсы, собираю дизайн-систему и рабочий прототип, который по сути готовый фронт. На нём же быстро собираются варианты для A/B-тестов.</p><span class="see"><a href="mary-platform.html">Mary · платформа →</a><a href="intreatment.html#chat">InTreatment · чат-подбор →</a><a href="intreatment.html#cabinet">InTreatment · кабинеты →</a></span></li>
+      <li class="reveal"><span class="n">02</span><h3>Сайты<small>лендинги и многостраничные</small></h3><p>Структура, тексты вместе с заказчиком, дизайн, анимации и мобильная версия. SEO и аналитику закладываю сразу. Могу сама сверстать и выложить.</p><span class="see"><a href="mary-site.html">maryrose.by →</a><a href="mary-dev.html">sales.maryrose.by →</a><a href="intreatment.html#site">intreatment.online →</a><a href="albumchik.html#site">albumchik.by →</a></span></li>
+      <li class="reveal"><span class="n">03</span><h3>Презентации<small>питч-деки, продающие, отдельные слайды</small></h3><p>Собираю историю и цифры в презентацию для инвесторов или клиентов. Делаю PDF, PPTX и веб-версию, могу оживить слайды моушеном.</p><span class="see"><a href="mary-deck.html">Mary · питч-дек на $3M →</a></span></li>
       <li class="reveal"><span class="n">04</span><h3>Моушен и видео<small>промо, мокапы, заставки</small></h3><p>Промо-ролики продукта, моушен интерфейсов и слайдов, видео-мокапы устройств, заставки и оформление YouTube-канала.</p><span class="see"><a href="mary.html#motion">Mary · ролики и мокапы →</a></span></li>
       <li class="reveal"><span class="n">05</span><h3>Айдентика<small>знак, стиль, носители</small></h3><p>Логотип и фирменный стиль, бейджи, визитки, мерч. Всё сразу проверяю на настоящих носителях и мокапах.</p><span class="see"><a href="mary.html#brand">Mary · бейджи и брошюры →</a><a href="albumchik.html#brand">ALBUMCHIK →</a></span></li>
       <li class="reveal"><span class="n">06</span><h3>Графика для соцсетей<small>посты, баннеры, обложки</small></h3><p>Посты и карусели, сторис, баннеры, шапки каналов и обложки к видео. В одном стиле с продуктом, чтобы соцсети не жили отдельно от сайта.</p><span class="see"><a href="mary.html#content">Mary · контент →</a></span></li>
@@ -134,7 +150,19 @@
     requestAnimationFrame(loop);
   })();
 
+  // фильтр работ: прячем карточки, которые не подходят
+  const wks = [...document.querySelectorAll('.wk')];
+  document.querySelectorAll('.flt button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.flt button').forEach(x => x.classList.toggle('is-on', x === b));
+    wks.forEach(w => w.hidden = b.dataset.f !== 'all' && w.dataset.kind !== b.dataset.f);
+  }));
+  // у карточек с роликом видео играет при наведении
+  wks.forEach(w => {
+    const v = w.querySelector('video[data-hover]'); if (!v) return;
+    w.addEventListener('pointerenter', () => { if (!v.src) v.src = v.dataset.src; v.play().catch(() => {}); w.classList.add('is-play'); });
+    w.addEventListener('pointerleave', () => { v.pause(); w.classList.remove('is-play'); });
+  });
 </script>
-<script src="assets/site.js?v=7"></script>
+<script src="assets/site.js?v=8"></script>
 </body>
 </html>

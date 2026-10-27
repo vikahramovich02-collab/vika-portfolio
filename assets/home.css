@@ -92,3 +92,23 @@
 .ai__tools span{padding:8px 14px;border:1px solid var(--line);border-radius:999px;font-size:13px}
 @media (max-width:900px){ .ai__head{grid-template-columns:1fr} .ai__lead{justify-self:start} .ai__list{grid-template-columns:1fr 1fr} }
 @media (max-width:560px){ .ai__list{grid-template-columns:1fr} }
+
+/* все работы: фильтр по типу и сетка карточек (Вика, 27.10) */
+.all{padding:clamp(120px,20vh,220px) var(--pad) 0}
+.all__head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.all h2{margin:0;font-weight:500;font-size:clamp(48px,8vw,130px);line-height:.88;letter-spacing:-.055em}
+.flt{display:flex;flex-wrap:wrap;gap:6px}
+.flt button{height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--dim);font:inherit;font-size:13px;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.flt button:hover{color:var(--fg);border-color:rgba(232,233,234,.35)}
+.flt button.is-on{background:var(--fg);border-color:var(--fg);color:#111}
+.wks{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(32px,5vh,56px) var(--pad);margin-top:clamp(40px,8vh,80px)}
+.wk[hidden]{display:none}
+.wk__img{position:relative;display:block;overflow:hidden;border-radius:6px;background:var(--panel)}
+.wk__img img,.wk__img video{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:top;transition:transform .8s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.wk__img video{position:absolute;inset:0;height:100%;opacity:0}
+.wk.is-play .wk__img video{opacity:1}
+.wk:hover .wk__img img,.wk:hover .wk__img video{transform:scale(1.03)}
+.wk b{display:block;margin-top:14px;font-weight:500;font-size:clamp(18px,1.6vw,24px);letter-spacing:-.02em}
+.wk small{display:block;margin-top:4px;font-size:13px;color:var(--dim)}
+@media (max-width:900px){ .wks{grid-template-columns:1fr 1fr} }
+@media (max-width:560px){ .wks{grid-template-columns:1fr} }

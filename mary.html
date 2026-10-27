@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap">
-<link rel="stylesheet" href="assets/base.css?v=7">
-<link rel="stylesheet" href="assets/case.css?v=7">
+<link rel="stylesheet" href="assets/base.css?v=8">
+<link rel="stylesheet" href="assets/case.css?v=8">
 </head>
 <body>
   <div class="meta">
@@ -52,10 +52,7 @@
     <h2>Что внутри</h2>
     <ol>
       <li><a href="#context">Контекст и моя роль <span>с чего начинали</span></a></li>
-      <li><a href="#platform">Платформа <span>продукт, UX, дизайн-система</span></a></li>
-      <li><a href="#site">Основной сайт <span>maryrose.by</span></a></li>
-      <li><a href="#dev">Сайт разработки <span>sales.maryrose.by</span></a></li>
-      <li><a href="#deck">Питч-дек <span>презентация для инвесторов</span></a></li>
+      <li><a href="#projects">Проекты внутри Mary <span>платформа, 2 сайта, питч-дек</span></a></li>
       <li><a href="#motion">Моушен и видео <span>ролики, мокапы, YouTube</span></a></li>
       <li><a href="#brand">Айдентика и печать <span>бейджи, брошюры, визитки</span></a></li>
       <li><a href="#content">Визитки команды и контент <span>links, CEO, соцсети</span></a></li>
@@ -84,108 +81,25 @@
       </div>
     </section>
 
-    <section class="ch" id="platform">
+    <section class="ch" id="projects">
       <div class="ch__text">
-        <div class="ch__n"><span>02</span><span>Платформа</span></div>
-        <h2>Интерфейс, который начинается с одного чата</h2>
-        <p>Главное решение в продукте: человек не настраивает систему руками. Он просто разговаривает с Mary. В начале в боковом меню есть только «Чат», а разделы компании появляются по ходу разговора, когда Mary узнаёт про отделы, сотрудников и задачи.</p>
-        <p>Mary сначала расспрашивает (минимум четыре-пять вопросов) и только потом собирает отдел. Автоматизации собираются на канвасе из узлов: «точка входа», «понять запрос», «ответить и уточнить». Пользователь видит, как идёт сборка, и может поправить любой шаг словами.</p>
-        <ul class="rows">
-          <li><b>Онбординг</b><span>Диалог вместо формы. Разделы открываются по ходу разговора</span></li>
-          <li><b>Автоматизации</b><span>Канвас с узлами, логи сборки, правки словами в том же чате</span></li>
-          <li><b>Сотрудники</b><span>Одна ссылка-приглашение, вход через Google, роли повышает директор</span></li>
-          <li><b>Дизайн-система</b><span>Переменные, текстовые стили, 150+ компонентов в Figma и копия в коде</span></li>
-          <li><b>Версии</b><span>MVP0 каркас → MVP1 рабочий чат → MVP2 шаблоны сервисов. Версия закрывается событием, а не датой</span></li>
-        </ul>
-        <div class="tags"><span>Product discovery</span><span>UX/UI</span><span>Дизайн-система</span><span>Прототип = фронт</span><span>Роадмап</span></div>
+        <div class="ch__n"><span>02</span><span>Проекты внутри Mary</span></div>
+        <h2>Четыре отдельных кейса</h2>
+        <p>Платформу, два сайта и питч-дек я разобрала отдельно: у каждого своя задача, аудитория и решения.</p>
       </div>
       <div class="ch__media">
-        <figure class="reveal"><video data-auto data-src="img/mary/v-platform.mp4" poster="img/mary/v-platform.webp" muted loop playsinline preload="none"></video><figcaption>Живой прототип платформы. Mary в чате собирает автоматизацию под задачу клиента</figcaption></figure>
-        <figure class="reveal panel panel--light"><img src="img/mary/app.webp" alt="Экран чата платформы Mary" loading="lazy"><figcaption style="color:#5d6166">Первый экран: «Привет, я Mary, заберу рутину вашего бизнеса». Дальше всё через разговор</figcaption></figure>
-        <div class="duo">
-          <figure class="reveal"><video data-auto data-src="img/mary/v-automation.mp4" poster="img/mary/v-automation.webp" muted loop playsinline preload="none"></video><figcaption>Сборка воркфлоу: узлы появляются по мере того, как Mary понимает процесс</figcaption></figure>
-          <figure class="reveal"><video data-auto data-src="img/mary/v-workflow.mp4" poster="img/mary/v-workflow.webp" muted loop playsinline preload="none"></video><figcaption>Тот же воркфлоу на планшете. Анимация живёт и на сайте</figcaption></figure>
+        <div class="proj">
+          <a class="proj__card reveal" id="platform" href="mary-platform.html" data-cursor="Смотреть кейс"><img src="img/mary/v-platform.webp" alt="Платформа Mary" loading="lazy"><small>Платформа</small><b>Интерфейс, который начинается с одного чата</b></a>
+          <a class="proj__card reveal" id="site" href="mary-site.html" data-cursor="Смотреть кейс"><img src="img/mary/home_0.webp" alt="Сайт maryrose.by" loading="lazy"><small>Сайт</small><b>maryrose.by</b></a>
+          <a class="proj__card reveal" id="dev" href="mary-dev.html" data-cursor="Смотреть кейс"><img src="img/mary/dev_0.webp" alt="Сайт sales.maryrose.by" loading="lazy"><small>Сайт</small><b>sales.maryrose.by</b></a>
+          <a class="proj__card reveal" id="deck" href="mary-deck.html" data-cursor="Смотреть кейс"><img src="img/mary/deck-s01.webp" alt="Питч-дек Mary" loading="lazy"><small>Презентация</small><b>Питч-дек на $3M</b></a>
         </div>
-        <figure class="reveal"><img class="shot" src="img/mary/deck-s10.webp" alt="Автоматизация собирается в рабочий воркфлоу" loading="lazy"><figcaption>Слайд для инвесторов: автоматизация собирается в рабочий воркфлоу</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="ch" id="site">
-      <div class="ch__text">
-        <div class="ch__n"><span>03</span><span>Основной сайт</span></div>
-        <h2>maryrose.by</h2>
-        <p>Сайт объясняет продукт человеку, который никогда не слышал про AI-агентов. Поэтому на первом экране не технологии, а результат: «Mary заберёт продажи / бухгалтерию / поддержку вашего бизнеса». Слово в заголовке меняется под нишу.</p>
-        <p>Ниже показываю, как это работает, на живых экранах продукта, а не на абстрактных иконках. Дальше ниши, кейсы, блог с новостями, команда и страница для инвесторов. Сайт на двух языках, SEO и аналитика заложены с первого дня.</p>
-        <p>Сайт я не только рисую, но и собираю сама: блоки на React, выкладка через pull request с автодеплоем. Правка от идеи до продакшна занимает часы, а не спринт.</p>
-        <ul class="rows">
-          <li><b>Страницы</b><span>Главная, ниши, блог и новости, команда, инвесторам, веб-презентация, EN-версия</span></li>
-          <li><b>Анимации</b><span>Блоки проявляются при каждом заходе в экран, заголовки тоже</span></li>
-          <li><b>Мобильная</b><span>Каждый экран отдельно собран под телефон</span></li>
-        </ul>
-        <a class="more" href="https://maryrose.by/?utm_source=vika&amp;utm_medium=portfolio" target="_blank" rel="noopener">Открыть сайт ↗︎</a>
-      </div>
-      <div class="ch__media">
-        <figure class="reveal"><video data-auto data-src="img/mary/v-site.mp4" poster="img/mary/v-site.webp" muted loop playsinline preload="none"></video><figcaption>Главная в движении: скролл по блокам «Как работает»</figcaption></figure>
-        <figure class="reveal"><img class="shot" src="img/mary/home_0.webp" alt="Первый экран maryrose.by" loading="lazy"><figcaption>Первый экран. Слово в заголовке меняется: продажи, бухгалтерию, поддержку</figcaption></figure>
-        <figure class="reveal"><img class="shot" src="img/mary/home_2.webp" alt="Блок с примерами задач" loading="lazy"><figcaption>«Одна фраза — и работа сделана». Примеры задач и что Mary возвращает в ответ</figcaption></figure>
-        <figure class="reveal"><img class="shot" src="img/mary/home_3.webp" alt="Блок про настройку" loading="lazy"><figcaption>Блок про то, что настраивать ничего не нужно</figcaption></figure>
-        <div class="duo">
-          <figure class="reveal"><img class="shot" src="img/mary/team.webp" alt="Страница команды" loading="lazy"><figcaption>Страница команды</figcaption></figure>
-          <figure class="reveal"><img class="shot" src="img/mary/blog.webp" alt="Блог Mary" loading="lazy"><figcaption>Блог и новости, в том числе запись питча</figcaption></figure>
-        </div>
-        <figure class="reveal panel"><div class="phones"><img src="img/mary/home_m.webp" alt="Мобильная главная" loading="lazy"><img src="img/mary/links_m.webp" alt="Страница links на телефоне" loading="lazy"></div><figcaption>Мобильная версия главной и страница ссылок</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="ch" id="dev">
-      <div class="ch__text">
-        <div class="ch__n"><span>04</span><span>Сайт разработки</span></div>
-        <h2>sales.maryrose.by</h2>
-        <p>У Mary есть второе направление: заказная разработка. Сайты, сервисы, внутренние системы и AI в рабочих процессах. Для него нужен был отдельный сайт с другим настроением: тёмный, спокойный, для тех, кто пришёл с конкретной задачей.</p>
-        <p>При этом он не должен выглядеть чужим. Навигация, формы, кнопки и тексты перекликаются с основным сайтом, поэтому человек, который переходит между ними, понимает, что это одна компания.</p>
-        <ul class="rows">
-          <li><b>Структура</b><span>Услуги, как задача превращается в результат, кейсы, вопросы, заявка</span></li>
-          <li><b>Приём</b><span>Список услуг раскрывается при наведении, бегущая строка этапов</span></li>
-        </ul>
-        <a class="more" href="https://sales.maryrose.by/" target="_blank" rel="noopener">Открыть сайт ↗︎</a>
-      </div>
-      <div class="ch__media">
-        <figure class="reveal"><video data-auto data-src="img/mary/v-dev.mp4" poster="img/mary/v-dev.webp" muted loop playsinline preload="none" style="max-width:640px;margin:0 auto"></video><figcaption style="text-align:center">«IT-решения для бизнеса» на мокапе</figcaption></figure>
-        <figure class="reveal"><img class="shot" src="img/mary/dev_0.webp" alt="Первый экран сайта разработки" loading="lazy"><figcaption>Первый экран</figcaption></figure>
-        <figure class="reveal"><img class="shot" src="img/mary/dev_2.webp" alt="Список услуг" loading="lazy"><figcaption>Услуги списком: название слева, пояснение справа</figcaption></figure>
-        <figure class="reveal"><img class="shot" src="img/mary/dev_1.webp" alt="Цитата основателя" loading="lazy"><figcaption>Слово основателя о том, почему мы берём сложные задачи</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="ch" id="deck">
-      <div class="ch__text">
-        <div class="ch__n"><span>05</span><span>Питч-дек</span></div>
-        <h2>Презентация на $3M</h2>
-        <p>Для выступления перед инвесторами я собрала питч-дек: проблема, решение, как работает продукт, рынок, выручка, команда и запрос $3M. Каждый слайд держит одну мысль, цифры крупно, всё остальное мелко.</p>
-        <p>Часть слайдов я оживила моушеном, чтобы на сцене продукт показывался в движении. Есть PDF и PPTX на русском и английском и веб-версия прямо на сайте. Запись выступления мы выложили на YouTube.</p>
-        <ul class="rows">
-          <li><b>Слайды</b><span>16 слайдов, из них 12 с моушеном</span></li>
-          <li><b>Форматы</b><span>Keynote, PPTX, PDF RU/EN, веб-версия на сайте</span></li>
-          <li><b>Где жил</b><span>Выступление перед инвесторами, рассылка фондам</span></li>
-        </ul>
-        <a class="more" href="https://youtu.be/v71ixlp6lj0" target="_blank" rel="noopener">Запись питча на YouTube ↗︎</a>
-      </div>
-      <div class="ch__media">
-        <figure class="reveal"><video data-auto data-src="img/mary/v-deck.mp4" poster="img/mary/v-deck.webp" muted loop playsinline preload="none"></video><figcaption>Все слайды по порядку на мокапе монитора</figcaption></figure>
-        <div class="duo">
-          <figure class="reveal"><img class="shot" src="img/mary/deck-s05.webp" alt="Слайд-переход" loading="lazy"><figcaption>Пауза перед решением: «И как это решить?»</figcaption></figure>
-          <figure class="reveal"><img class="shot" src="img/mary/deck-s08.webp" alt="Слайд про агента у каждого сотрудника" loading="lazy"><figcaption>У каждого сотрудника есть свой агент</figcaption></figure>
-          <figure class="reveal"><img class="shot" src="img/mary/deck-s12.webp" alt="Слайд про данные" loading="lazy"><figcaption>Безопасность данных клиентов</figcaption></figure>
-          <figure class="reveal"><img class="shot" src="img/mary/deck-s14.webp" alt="Слайд про рост" loading="lazy"><figcaption>Как растём: захватываем сервисы вокруг Mary</figcaption></figure>
-        </div>
-        <figure class="reveal"><img class="shot" src="img/mary/deck-s16.webp" alt="Слайд про выручку" loading="lazy"><figcaption>Выручка и клиенты крупно, без лишнего</figcaption></figure>
-        <figure class="reveal"><img class="shot" src="img/mary/pitch.webp" alt="Веб-версия презентации" loading="lazy"><figcaption>Веб-версия презентации на maryrose.by</figcaption></figure>
       </div>
     </section>
 
     <section class="ch" id="motion">
       <div class="ch__text">
-        <div class="ch__n"><span>06</span><span>Моушен и видео</span></div>
+        <div class="ch__n"><span>03</span><span>Моушен и видео</span></div>
         <h2>Ролики, где видно живой продукт</h2>
         <p>Для роликов я снимаю живой прототип, а не собираю скриншоты: так видно, как Mary реально отвечает и собирает автоматизацию. Делала промо на русском и английском, моушен отдельных слайдов, видео-мокапы устройств и заставку канала.</p>
         <p>Для портфолио собрала ролик, где камера облетает устройства. Нейросеть искажала текст на экранах, поэтому я отследила экран в каждом кадре и вклеила оригинал с правильной перспективой.</p>
@@ -203,7 +117,7 @@
 
     <section class="ch" id="brand">
       <div class="ch__text">
-        <div class="ch__n"><span>07</span><span>Айдентика и печать</span></div>
+        <div class="ch__n"><span>04</span><span>Айдентика и печать</span></div>
         <h2>Бейджи, брошюры, визитки</h2>
         <p>Когда команда едет на конференцию, у неё должно быть всё в одном стиле: бейджи, брошюра, визитки. Я сделала бейджи для каждого в команде, брошюру-гармошку с QR-кодами на сайт и презентацию и визитки.</p>
         <p>Всё проверяю на мокапах до печати: как бейдж висит на ленте, как гармошка складывается, читается ли текст с расстояния.</p>
@@ -222,7 +136,7 @@
 
     <section class="ch" id="content">
       <div class="ch__text">
-        <div class="ch__n"><span>08</span><span>Визитки команды и контент</span></div>
+        <div class="ch__n"><span>05</span><span>Визитки команды и контент</span></div>
         <h2>Всё, что человек видит в соцсетях</h2>
         <p>Сделала страницу со всеми ссылками Mary (одна ссылка для шапок профилей) и личную страницу CEO, которую он отправляет после встречи вместо визитки. Обе собраны под телефон, потому что открывают их почти всегда с телефона.</p>
         <p>Веду визуал соцсетей: посты для Telegram, Threads и Instagram, обложки, баннеры. Посты пишем живо и по-человечески, без канцелярита.</p>
@@ -238,7 +152,7 @@
 
     <section class="ch" id="process">
       <div class="ch__text">
-        <div class="ch__n"><span>09</span><span>Как я работаю</span></div>
+        <div class="ch__n"><span>06</span><span>Как я работаю</span></div>
         <h2>С ИИ от макета до готового фронта</h2>
         <p>Рисую в Figma, собираю дизайн-систему и вместе с Claude Code и Codex превращаю её в рабочий прототип. Видео и визуал делаю в Higgsfield. Разработчики получают не картинки, а готовый фронт, к которому остаётся подключить данные. Это экономит им недели.</p>
         <p>На этом же прототипе удобно собирать варианты для A/B-тестов и смотреть воронку: где люди уходят, что непонятно, что убрать.</p>
@@ -280,6 +194,6 @@
       <a href="https://t.me/viksaaaaaa_a" target="_blank" rel="noopener">@viksaaaaaa_a</a>
     </footer>
   </div>
-<script src="assets/site.js?v=7"></script>
+<script src="assets/site.js?v=8"></script>
 </body>
 </html>
