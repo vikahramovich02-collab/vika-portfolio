@@ -94,3 +94,18 @@
   .tags li{font-size:9.5px;padding:3px 8px}
 }
 .job li a{border-bottom:1px solid var(--line)} @media print{.job li a{border:0}}
+/* навыки строками вместо плашек */
+.skills{margin:16px 0 0;padding:0;list-style:none}
+.skills li{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:14px 0;border-top:1px solid var(--line);font-size:15px;line-height:1.55}
+.skills li:last-child{border-bottom:1px solid var(--line)}
+.skills b{font-weight:400;color:var(--dim)}
+.cv{padding-bottom:clamp(96px,16vh,180px)}
+@media (max-width:760px){ .skills li{grid-template-columns:1fr;gap:4px} }
+@media print{
+  .cv{padding-bottom:0}
+  .skills{margin-top:6px}
+  .skills li{grid-template-columns:110px 1fr;gap:14px;padding:5px 0;font-size:10.5px;line-height:1.45}
+}
+.end{padding:0 var(--pad) var(--pad)}
+.proj-list a{grid-template-columns:160px 1fr;gap:24px}
+@media print{ .proj-list a{grid-template-columns:110px 1fr;gap:14px} }
