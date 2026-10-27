@@ -15,14 +15,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&display=swap">
 <link rel="stylesheet" href="assets/base.css?v=8">
-<link rel="stylesheet" href="assets/home.css?v=8">
+<link rel="stylesheet" href="assets/home.css?v=9">
 </head>
 <body>
   <div class="meta">
     <b><a href="https://maryrose.by/vika">vika akhramovich</a></b>
-    <span class="hide-m">Product designer · AI-native<br><span class="dim">Сейчас CPO и&nbsp;продуктовый дизайнер в&nbsp;Mary AI</span></span>
+    <span class="hide-m">Product designer · AI-native<br><span class="dim">Сейчас CPO и&nbsp;продуктовый дизайнер в&nbsp;Mary AI</span><br><a href="resume.html" class="cv-link">резюме ↗︎</a></span>
     <span class="dim hide-m">Minsk</span>
-    <a href="resume.html">резюме ↗︎</a>
+    <span>2026©</span>
   </div>
 
   <section class="hero" id="hero">
@@ -83,7 +83,7 @@
       <a class="wk reveal" data-kind="site" href="https://vikahramovich02-collab.github.io/ingribel-site/" target="_blank" rel="noopener" data-cursor="Открыть сайт"><span class="wk__img"><img src="img/site-ingribel.webp" alt="Сайт INGRIBEL" loading="lazy"></span><b>INGRIBEL ↗︎</b><small>Сайт производителя пищевых ингредиентов</small></a>
       <a class="wk reveal" data-kind="site" href="https://vikahramovich02-collab.github.io/creative-bus-landing/" target="_blank" rel="noopener" data-cursor="Открыть сайт"><span class="wk__img"><img src="img/site-creativebus.webp?v=2" alt="Сайт Creative Bus" loading="lazy"></span><b>Creative Bus ↗︎</b><small>Лендинг рекламы на транспорте с прайсом и калькулятором</small></a>
       <a class="wk reveal" data-kind="site" href="https://vikahramovich02-collab.github.io/cinematic-store/" target="_blank" rel="noopener" data-cursor="Открыть сайт"><span class="wk__img"><img src="img/site-cinematic.webp" alt="Интернет-магазин CINEMATIC" loading="lazy"></span><b>CINEMATIC ↗︎</b><small>Интернет-магазин бренда мужской одежды · в разработке</small></a>
-      <a class="wk reveal" data-kind="site" href="https://vikahramovich02-collab.github.io/hideliv-qc-preview/" target="_blank" rel="noopener" data-cursor="Открыть сайт"><span class="wk__img"><img src="img/site-hideliv.webp" alt="Лендинг hideliv QC" loading="lazy"></span><b>hideliv QC ↗︎</b><small>Редизайн лендинга инспекции товаров в Китае</small></a>
+      <a class="wk reveal" data-kind="site print" href="hideliv.html" data-cursor="Смотреть кейс"><span class="wk__img"><img src="img/hd/bb-01.webp" alt="Лендинг hideliv QC" loading="lazy"></span><b>hideliv QC</b><small>Айдентика и лендинг сервиса инспекции товаров в Китае</small></a>
       <a class="wk reveal" data-kind="site" href="https://albumchik.by" target="_blank" rel="noopener" data-cursor="Открыть сайт"><span class="wk__img"><img src="img/al/home_0.webp" alt="albumchik.by" loading="lazy"></span><b>albumchik.by ↗︎</b><small>Сайт моего проекта журналов</small></a>
       <a class="wk reveal" data-kind="print" href="albumchik.html#magazines" data-cursor="Смотреть"><span class="wk__img"><img src="img/al/cover.webp" alt="ALBUMCHIK" loading="lazy"></span><b>ALBUMCHIK</b><small>Журналы о человеке и фотоальбомы</small></a>
       <a class="wk reveal" data-kind="print" href="mary.html#brand" data-cursor="Смотреть"><span class="wk__img"><img src="img/mary/brochure.webp" alt="Брошюра-гармошка Mary" loading="lazy"></span><b>Mary · печать</b><small>Бейджи, брошюра-гармошка, визитки</small></a>
@@ -155,7 +155,7 @@
   const wks = [...document.querySelectorAll('.wk')];
   document.querySelectorAll('.flt button').forEach(b => b.addEventListener('click', () => {
     document.querySelectorAll('.flt button').forEach(x => x.classList.toggle('is-on', x === b));
-    wks.forEach(w => w.hidden = b.dataset.f !== 'all' && w.dataset.kind !== b.dataset.f);
+    wks.forEach(w => w.hidden = b.dataset.f !== 'all' && !w.dataset.kind.split(' ').includes(b.dataset.f));
   }));
   // у карточек с роликом видео играет при наведении
   wks.forEach(w => {

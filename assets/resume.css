@@ -16,7 +16,7 @@
 .cv__sec{margin-top:clamp(64px,10vh,112px)}
 .cv__sec h2{margin:0 0 8px;font-weight:500;font-size:clamp(28px,3vw,44px);letter-spacing:-.04em}
 
-.job{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:160px 1fr;gap:24px;padding:24px 0;border-top:1px solid var(--line)}
 .job:last-child{border-bottom:1px solid var(--line)}
 .job__when{font-size:14px;color:var(--dim);padding-top:6px}
 .job h3{margin:0;font-weight:500;font-size:clamp(22px,2vw,28px);letter-spacing:-.03em}
