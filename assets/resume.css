@@ -93,3 +93,4 @@
   .tags{margin-top:8px;gap:4px}
   .tags li{font-size:9.5px;padding:3px 8px}
 }
+.job li a{border-bottom:1px solid var(--line)} @media print{.job li a{border:0}}
