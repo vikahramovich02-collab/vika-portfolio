@@ -116,3 +116,12 @@
 @media (max-width:760px){ .cv__facts{grid-template-columns:1fr 1fr} }
 .job__when small{display:block;margin-top:4px;font-size:13px;color:var(--faint)}
 @media print{ .job__when small{font-size:10px;color:#777;margin-top:2px} }
+@media print{
+  @page{margin:9mm 12mm}
+  .cv h1{font-size:30px}
+  .cv__lead{font-size:10.5px}
+  .cv__sec{margin-top:11px}
+  .job{padding:6px 0}
+  .job__role,.job__about,.job ul{font-size:10px}
+  .skills li,.proj-list a{padding:4px 0;font-size:10px}
+}
