@@ -100,7 +100,7 @@
     "МТС · кабинет услуги →": "MTS · service account →", "Mary · платформа →": "Mary · platform →", "Mary · дизайн-система кодом →": "Mary · design system in code →",
     "InTreatment · чат-подбор →": "InTreatment · chat matching →", "InTreatment · кабинеты →": "InTreatment · accounts →",
     "лендинги и многостраничные": "landing pages and multi-page sites",
-    "Структура, тексты вместе с заказчиком, дизайн, анимации и мобильная версия. SEO и аналитику закладываю сразу. Могу сама сверстать и выложить.": "Structure, copy together with the client, design, animation and a mobile version. SEO and analytics are built in from day one. I can build and ship it myself.",
+    "Полный цикл: продающая структура и тексты, дизайн, анимации, мобильная версия, вёрстка и быстрый релиз. Сразу закладываю SEO и семантическое ядро, аналитику и A/B-тесты.": "Full cycle: a selling structure and copy, design, animation, mobile version, build and a fast release. SEO and a semantic core, analytics and A/B tests are built in from the start.",
     "МТС · лендинг →": "MTS · landing →",
     "Презентации": "Presentations", "питч-деки, продающие, отдельные слайды": "pitch decks, sales decks, single slides",
     "Собираю понятные и структурные питч-деки и презентации, которые упаковывают продукт. В моём арсенале три питч-дека, которые получили инвестиции.": "I build clear, well-structured pitch decks and presentations that package the product. Three of my pitch decks have raised investment.",
