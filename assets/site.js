@@ -153,3 +153,31 @@
     a.addEventListener('mouseleave', () => { pop.classList.remove('is-on'); cancelAnimationFrame(raf); raf = 0; });
   });
 })();
+
+// мобильное меню: две полоски в шапке, полноэкранный список (Вика, 13.11)
+(() => {
+  const meta = document.querySelector('.meta'); if (!meta) return;
+  const en = document.documentElement.lang === 'en' || (localStorage.getItem && (() => { try { return localStorage.getItem('lang') === 'en'; } catch (e) { return false; } })());
+  const btn = document.createElement('button');
+  btn.type = 'button'; btn.className = 'burger'; btn.setAttribute('aria-label', 'Меню'); btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '<i></i><i></i>';
+  (meta.querySelector('.end-col') || meta).appendChild(btn);
+  const nav = document.createElement('nav');
+  nav.className = 'mnav'; nav.setAttribute('aria-label', 'Меню');
+  nav.innerHTML = `
+    <div class="mnav__group"><span class="mnav__k">Кейсы</span>
+      <a href="mary">Mary AI</a><a href="intreatment">InTreatment</a><a href="mts">МТС</a><a href="ingribel">INGRIBEL</a><a href="hideliv">hideliv</a><a href="albumchik">ALBUMCHIK</a>
+    </div>
+    <div class="mnav__group">
+      <a href="./#all">Все работы</a><a href="./#services">Что я делаю</a><a href="resume">Резюме</a><a href="vika-akhramovich-cv.pdf" download>Резюме PDF ↓</a>
+    </div>
+    <div class="mnav__group mnav__contacts"><span class="mnav__k">Контакты</span>
+      <a href="https://t.me/viksaaaaaa_a" target="_blank" rel="noopener">Telegram @viksaaaaaa_a ↗︎</a>
+      <span>Минск · работаю удалённо</span>
+    </div>`;
+  document.body.appendChild(nav);
+  const set = on => { document.body.classList.toggle('mnav-on', on); btn.setAttribute('aria-expanded', on ? 'true' : 'false'); };
+  btn.addEventListener('click', () => set(!document.body.classList.contains('mnav-on')));
+  nav.addEventListener('click', e => { if (e.target.closest('a')) set(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') set(false); });
+})();

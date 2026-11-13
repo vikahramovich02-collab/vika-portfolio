@@ -2,6 +2,7 @@
 // Чего нет в словаре, остаётся по-русски. Выбор языка запоминается.
 (() => {
   const EN = {
+    "Кейсы": "Case studies", "Контакты": "Contacts", "Резюме PDF ↓": "CV PDF ↓", "Минск · работаю удалённо": "Minsk · working remotely",
     "Продуктовый дизайнер · AI-native": "Product designer · AI-native",
     "Продуктовый дизайнер": "Product designer",
     "Продуктовый": "Product",
