@@ -82,6 +82,8 @@
     "Многостраничный сайт платформы": "Multi-page platform website",
     "Сайт производителя пищевых ингредиентов": "Website for a food ingredients manufacturer",
     "Лендинг рекламы на транспорте с прайсом и калькулятором": "Transit advertising landing page with pricing and a calculator",
+    "Сайт рекламы на транспорте: прайс со схемами и калькулятор": "Transit advertising website: a price list with diagrams and a calculator",
+    "Creative Bus →": "Creative Bus →",
     "Интернет-магазин бренда мужской одежды · в разработке": "Menswear online store · in progress",
     "Айдентика и лендинг сервиса инспекции товаров в Китае": "Identity and landing page for a goods inspection service in China",
     "Сайт моего проекта журналов": "Website of my magazine project",
