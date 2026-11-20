@@ -1,5 +1,18 @@
 // EN для страниц кейсов (12.11). Ключ — русский текст узла.
 window.I18N_EXTRA = {
+"чтобы находили в Таганроге": "so people in Taganrog find it",
+"Чтобы находили в Таганроге": "So people in Taganrog find it",
+"Рекламу на транспорте ищут по конкретному формату и городу: «бортовая реклама Таганрог», «реклама на маршрутках». Поэтому у каждого формата своя страница со своим текстом, а не один общий раздел «Услуги».": "People search for transit advertising by format and city: “bus side ads Taganrog”, “minibus ads”. So every format has its own page with its own copy instead of one generic “Services” section.",
+"Для поисковиков у каждой страницы свой заголовок, описание и адрес, а для карточек в мессенджерах — превью. В разметке schema.org компания описана как местный бизнес: адрес, часы работы, город и пригороды, все восемь услуг с ценами.": "Every page has its own title, description and canonical URL for search engines, plus a preview card for messengers. In schema.org markup the company is a local business: address, opening hours, city and suburbs, all eight services with prices.",
+"Страницы услуг": "Service pages",
+"бортовая, наклейки, листовки, спинки сидений — со своими SEO-текстами": "bus sides, stickers, leaflets, seat backs — each with its own SEO copy",
+"Мета-теги": "Meta tags",
+"title, description, canonical и Open Graph на всех 14 страницах": "title, description, canonical and Open Graph on all 14 pages",
+"Разметка": "Markup",
+"schema.org: LocalBusiness, зона обслуживания, 8 услуг с ценами": "schema.org: LocalBusiness, service area, 8 services with prices",
+"Индексация": "Indexing",
+"sitemap.xml на 13 страниц и robots.txt, версия прайса для печати закрыта": "sitemap.xml with 13 pages and robots.txt, the print version of the price list is excluded",
+"У каждого формата своя страница: заголовок и описание под поисковый запрос, цена и схема размещения.": "Each format has its own page: title and description matched to the search query, price and placement diagram.",
 "Мой проект: журналы и фотоальбомы": "My project: magazines and photo albums",
 "Кейс 03 · Личный проект": "Case 03 · Personal project",
 "Мой личный проект. Собираю журналы о человеке и фотоальбомы из фотосессий, кадров с телефона и историй.": "My personal project. I make magazines about a person and photo albums from photo shoots, phone shots and stories.",
